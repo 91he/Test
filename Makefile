@@ -6,4 +6,3 @@ image_cache.o: image_cache.c
 	gcc -c image_cache.c
 image_queue.o: image_queue.c
 	gcc -c image_queue.c
-

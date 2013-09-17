@@ -5,19 +5,14 @@
 #include "image_queue.h"
 
 struct list_head *POOL_HEAD = NULL;
-mHashTable *g_H = NULL;
+//mHashTable *g_H = NULL;
 
 struct list_head *RES_HEAD = NULL;
-int g_res = 0;
-
-FILE *gLogFile = NULL;
 
 extern image_queue img_queue;
 extern image_queue *img_q_ptr;
 
 void resAdd(int s, int hash_index){
-	g_res++;
-
 	struct resList *tmp = malloc(sizeof(struct resList));
 	list_add_tail(&tmp->node, RES_HEAD);
 	tmp->data[0] = 106;
@@ -26,10 +21,6 @@ void resAdd(int s, int hash_index){
 }
 
 int mInitPool(){
-	char buf[32];
-	sprintf(buf, "/tmp/%d.log", getpid());
-	gLogFile = fopen(buf, "w+");
-
 	POOL_HEAD = malloc(sizeof(struct list_head));
 	if(POOL_HEAD){
 		INIT_LIST_HEAD(POOL_HEAD);
@@ -43,7 +34,7 @@ int mInitPool(){
 	return -1;
 }
 
-mHashTable *mInitHash(unsigned int size, unsigned int caps){
+mHashTable *mInitHash(unsigned int size, unsigned long caps){
 	mHashTable *H = malloc(sizeof(mHashTable));
 	if(!H){
 		fprintf(stderr, "Out of space!\n");
@@ -88,8 +79,13 @@ struct mData *mFind(char *rgb, unsigned int rgblen, mHashTable *H){
 	struct mList *tmp = NULL;
 	list_for_each_safe(pos, n, H->arr+key){
 		tmp = list_entry(pos, struct mList, hlist);
-		if(rgblen == tmp->data.rgblen && !memcmp(tmp->data.rgb, rgb, rgblen))
+		if(rgblen == tmp->data.rgblen && !memcmp(tmp->data.rgb, rgb, rgblen)){
+			list_del(&tmp->hlist);
+			list_add(&tmp->hlist, H->arr+key);
+			list_del(&tmp->mlist);
+			list_add(&tmp->mlist, POOL_HEAD);
 			return &tmp->data;
+		}
 	}
 	return NULL;
 }
@@ -146,11 +142,10 @@ int mInsert(int s, char *rgb, char *jpg, unsigned int rgblen, unsigned int jpgle
 	H->num += rgblen+jpglen;
 	while(H->num > H->caps){
 		tmp = list_entry(POOL_HEAD->prev, struct mList, mlist);
-		//if(tmp->data.s)
-		if(img_q_ptr->hash_index[tmp->data.s] != -1){
-			resAdd(-tmp->data.s, ~img_q_ptr->hash_index[tmp->data.s]);
-		}
-		img_q_ptr->hash_index[tmp->data.s] = -1;
+		//if(img_q_ptr->hash_index[tmp->data.s] != -1){
+		//	resAdd(-tmp->data.s, ~img_q_ptr->hash_index[tmp->data.s]);
+		//}
+		//img_q_ptr->hash_index[tmp->data.s] = -1;
 		imgq_enque(tmp->data.s);
 		list_del(&tmp->hlist);
 		list_del(&tmp->mlist);
@@ -160,14 +155,6 @@ int mInsert(int s, char *rgb, char *jpg, unsigned int rgblen, unsigned int jpgle
 		free(tmp);
 	}
 	//printf("memory now=%d\n", H->num);
-	static time_t tt = 0;
-	if(time(NULL) - tt > 20){
-		tt = time(NULL);
-		char buf[64];
-		sprintf(buf, "memory=%d, res=%d\n", H->num, g_res);
-		fwrite(buf, 1, strlen(buf), gLogFile);
-		fflush(gLogFile);
-	}
 	return 0;
 }
 

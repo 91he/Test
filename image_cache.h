@@ -42,8 +42,8 @@ struct mList{
 
 typedef struct mHashTable{
 	unsigned int size;
-	unsigned int num;
-	unsigned int caps;
+	unsigned long num;
+	unsigned long caps;
 	struct list_head *arr;
 }mHashTable;
 
@@ -53,7 +53,7 @@ int mInitPool();
 
 void resAdd(int s, int hash_index);
 
-mHashTable *mInitHash(unsigned int size, unsigned int caps);
+mHashTable *mInitHash(unsigned int size, unsigned long caps);
 
 unsigned int mHash(char *data, unsigned int len, mHashTable *H);
 

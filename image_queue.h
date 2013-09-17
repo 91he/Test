@@ -7,12 +7,13 @@
 #include <stdbool.h>
 #include "image_cache.h"
 
-#define NUM (10000)
+#define NUM (100000)
+//int hash_index[NUM+1];
 
 typedef struct IMAGE_QUEUE{
 	int cur;
 	int size;
-	int hash_index[NUM+1];
+	//int hash_index[NUM+1];
 	int num[NUM];
 }image_queue;
 

@@ -9,7 +9,7 @@ void init_imgq()
 	int i = 0;
 	for(i = 0;i< NUM; i++){
 		img_q_ptr->num[i] = i+1;
-		img_q_ptr->hash_index[i] = -1;
+		//img_q_ptr->hash_index[i] = -1;
 	}
 	img_q_ptr->size = NUM;
 	img_q_ptr->cur = 0;
@@ -32,7 +32,6 @@ bool imgq_enque(int s)
 	int index = (img_q_ptr->cur + img_q_ptr->size)%NUM;
 	img_q_ptr->num[index] = s;
 	img_q_ptr->size++;
-	//printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx s = %d\n",s);
 	return true;
 }
 
