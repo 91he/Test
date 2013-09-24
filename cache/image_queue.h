@@ -7,7 +7,7 @@
 #include <stdbool.h>
 #include "image_cache.h"
 
-#define NUM (100000)
+#define NUM 100000
 //int hash_index[NUM+1];
 
 typedef struct IMAGE_QUEUE{

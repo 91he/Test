@@ -1,14 +1,8 @@
-#include <stdio.h>
-#include <sys/socket.h>
-#include <sys/un.h>
+#include "cache_sock.h"
 
 int cache_fd = -1;
 
-struct cache_ret{
-	int s;
-	int size;
-	char ret[1048576];
-};
+int s_index[100001];
 
 int cache_readn(int fd, char *buf, int n){
 	int len = 0, r;
@@ -96,7 +90,6 @@ insert_error:
 	cache_fd = -1;
 	return 0;
 }
-
 int main(){
 	int fd = init_cache_sock("/opt/cache_all.sock");
 	if(fd == -1)
