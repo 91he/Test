@@ -6,6 +6,7 @@
 #include <sys/types.h> 
 #include <sys/stat.h> 
 #include <time.h>
+
 void init_daemon(void) 
 { 
 	int pid; 

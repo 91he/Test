@@ -45,8 +45,7 @@ int readn(int fd, char *buf, int n){
 	while(len < n){
 		r = read(fd, buf+len, n-len);
 		if(r == -1){
-			if(errno == EAGAIN)
-				continue;
+			if(errno == EAGAIN) continue;
 			perror("read error!");
 			return -1;
 		}
@@ -181,15 +180,15 @@ int main(){
 	}
 	int n;
 
-	for (;;) {
+	for(;;){
 		nfds = epoll_wait(epollfd, events, MAX_EVENTS, -1);
 		if (nfds == -1) {
 			perror("epoll_wait");
 			exit(EXIT_FAILURE);
 		}
 
-		for (n = 0; n < nfds; ++n) {
-			if (events[n].data.fd == listen_sock) {
+		for(n = 0; n < nfds; ++n) {
+			if(events[n].data.fd == listen_sock){
 				//conn_sock = accept(listen_sock, (struct sockaddr *) &local, &addrlen);
 				conn_sock = accept(listen_sock, NULL, NULL);
 				if (conn_sock == -1) {
@@ -204,7 +203,7 @@ int main(){
 					perror("epoll_ctl: conn_sock");
 					exit(EXIT_FAILURE);
 				}
-			} else {
+			}else{
 				if(do_use_fd(events[n].data.fd) == -1)
 					close(events[n].data.fd);
 			}
