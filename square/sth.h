@@ -11,6 +11,6 @@ public:
 protected:
 	void run();
 signals:	
-	   void down();
+	void down();
 };
 #endif

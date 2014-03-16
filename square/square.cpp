@@ -8,12 +8,63 @@ Square::Square(QWidget *parent)
 :QDialog(parent)
 {
 	stoped = 0;
+	score = 0;
 	memset(garr, 0, sizeof(garr));
-	this->resize(222, 362);
+	this->setFixedSize(342,362);
+
+	qw = new QWidget(this);
+	qw->setAutoFillBackground(true);
+	qw->resize(0, 0);
+
+	QPalette pl;
+	pl.setColor(QPalette::Window, QColor(255, 255, 255));
+	qw->setPalette(pl);
+
+	pl.setColor(QPalette::Window, QColor(200, 200, 200));
+	this->setPalette(pl);
+
+	qpa = new QPropertyAnimation(qw, "geometry");
+	qpa->setDuration(100);
+
+	topRight = new QWidget(this);
+	topRight->resize(120, 120);
+	topRight->move(222, 50);
+	topRight->setAutoFillBackground(true);
+	pl.setColor(QPalette::Window, QColor(255, 255, 255));
+	topRight->setPalette(pl);
+
+	sL = new QLabel("<b>SCORE</b>", this);
+	sL->resize(60, 20);
+	sL->move(225, 220);
+	scoreLabel = new QLabel("0", this);
+	scoreLabel->resize(60, 20);
+	scoreLabel->move(282, 220);
+	scoreLabel->setAlignment(Qt::AlignRight);
+
 	s = new Shape(this);
+	s2 = new Shape(this);
+	s2->move(250, 70);
+	sd = new Phonon::MediaObject(this);
+	Phonon::AudioOutput *ao = new Phonon::AudioOutput(Phonon::MusicCategory, this);
+	Phonon::createPath(sd, ao);
 	s->resize(90, 90);
+
 	connect(&th, SIGNAL(down()), this, SLOT(run()));
+	connect(this, SIGNAL(mksd()), sd, SLOT(play()));
 	th.start();
+}
+
+Square::~Square(){
+	delete sd;
+	delete s;
+}
+
+void Square::paintEvent(QPaintEvent *event){
+	QPainter pt(this);
+	QColor color(255, 255, 255);
+	pt.setPen(QPen(QBrush(color), 2));
+	pt.drawRect(0, 0, 222, 362);
+	//pt.drawLine(222, 0, 222, 362);
 }
 
 bool Square::moveable(char m){
@@ -46,10 +97,10 @@ bool Square::moveable(char m){
 			break;
 	}
 	bool ret = true;
-	if(x+x1 < 0 || x+x1+20 > this->width() || 
-			x+x2 < 0 || x+x2+20 > this->width() || 
-			x+x3 < 0 || x+x3+20 > this->width() ||
-			x+x4 < 0 || x+x4+20 > this->width()){
+	if(x+x1 < 0 || x+x1+20 > (this->width()-120)|| 
+			x+x2 < 0 || x+x2+20 > (this->width()-120)|| 
+			x+x3 < 0 || x+x3+20 > (this->width()-120)||
+			x+x4 < 0 || x+x4+20 > (this->width()-120)){
 		ret = false;
 	}else if(garr[(x+x1)/20][(y+y1)/20] || 
 			garr[(x+x2)/20][(y+y2)/20] || 
@@ -102,6 +153,8 @@ void Square::run(){
 	if(moveable('d')){
 		s->moveDown();
 	}else{
+		sd->setCurrentSource(Phonon::MediaSource("sound/bullet.mp3"));
+		emit mksd();
 		int x1 = s->x+s->x1, y1 = s->y+s->y1;
 		int x2 = s->x+s->x2, y2 = s->y+s->y2;
 		int x3 = s->x+s->x3, y3 = s->y+s->y3;
@@ -128,11 +181,18 @@ void Square::run(){
 		garr[x4/20][y4/20] = t;
 
 		delete s;
-		s = new Shape(this);
+		s2->move(80, 0);
+		s = s2;
+		s2 = new Shape(this);
+		s2->move(250, 70);
+		s2->setVisible(true);
+
 		if(garr[(s->x+s->x1)/20][(s->y+s->y1)/20] || 
 				garr[(s->x+s->x2)/20][(s->y+s->y2)/20] || 
 				garr[(s->x+s->x3)/20][(s->y+s->y3)/20] || 
 				garr[(s->x+s->x4)/20][(s->y+s->y4)/20]){
+			sd->setCurrentSource(Phonon::MediaSource("sound/game_over.mp3"));
+			emit mksd();
 			th.stop();
 			QMessageBox::information( this, "Information", "Game over!" );
 			close();
@@ -165,7 +225,7 @@ void Square::run(){
 		int i = 0;
 		while(arr[i] && i < 4){
 			arr[i] /= 20;
-			int w = this->width()/20;
+			int w = (this->width()-120)/20;
 			int j = arr[i]*w;
 			int ret = 0;
 			int t = w;
@@ -176,10 +236,25 @@ void Square::run(){
 				}
 			}
 			if(!ret){
+				score += 10;
+				char tmp[12];
+				sprintf(tmp, "%u", score);
+				scoreLabel->setText(tmp);
+				sd->setCurrentSource(Phonon::MediaSource("sound/achievement.mp3"));
+				emit mksd();
 				t = w;
 
 				while(t--)
 					delete garr[t][arr[i]];
+
+				qpa->setStartValue(QRect(0, arr[i]*20+11, 220, 0));
+				qpa->setKeyValueAt(0.2, QRect(0, arr[i]*20+1, 220, 20));
+				qpa->setEndValue(QRect(110, arr[i]*20+1, 0, 20));
+				qpa->start();
+				QTime t;
+				t.start();
+				while(t.elapsed() < 150)
+					    QCoreApplication::processEvents();
 
 				while(--j >= w){
 					if(garr[j%w][j/w]){

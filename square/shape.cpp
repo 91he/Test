@@ -76,119 +76,12 @@ char* Shape::make(char s){
 	y2 = shapeArr[(unsigned int)s].y2;
 	y3 = shapeArr[(unsigned int)s].y3;
 	y4 = shapeArr[(unsigned int)s].y4;
-	/*
-	switch(s){
-		case 1:
-			x1 = 20, y1 = 0, x2 = 20, y2 = 20, x3 = 20, y3 = 40, x4 = 20, y4 = 60;
-			sprintf(color, "red");
-			break;
-		case 2:
-			x1 = 0, y1 = 20, x2 = 20, y2 = 20, x3 = 40, y3 = 20, x4 = 60, y4 = 20;
-			sprintf(color, "red");
-			break;
-		case 3:
-			sprintf(color, "green");
-			x1 = 20, y1 = 20, x2 = 40, y2 = 20, x3 = 20, y3 = 40, x4 = 40, y4 = 40;
-			break;
-		case 4:
-			sprintf(color, "blue");
-			x1 = 20, y1 = 0, x2 = 20, y2 = 20, x3 = 20, y3 = 40, x4 = 40, y4 = 40;
-			break;
-		case 5:
-			sprintf(color, "blue");
-			x1 = 0, y1 = 20, x2 = 20, y2 = 20, x3 = 40, y3 = 20, x4 = 40, y4 = 0;
-			break;
-		case 6:
-			sprintf(color, "blue");
-			x1 = 0, y1 = 0, x2 = 20, y2 = 0, x3 = 20, y3 = 20, x4 = 20, y4 = 40;
-			break;
-		case 7:
-			sprintf(color, "blue");
-			x1 = 0, y1 = 20, x2 = 20, y2 = 20, x3 = 40, y3 = 20, x4 = 0, y4 = 40;
-			break;
-		case 8:
-			sprintf(color, "cyan");
-			x1 = 20, y1 = 0, x2 = 20, y2 = 20, x3 = 20, y3 = 40, x4 = 0, y4 = 40;
-			break;
-		case 9:
-			sprintf(color, "cyan");
-			x1 = 0, y1 = 20, x2 = 20, y2 = 20, x3 = 40, y3 = 20, x4 = 40, y4 = 40;
-			break;
-		case 10:
-			sprintf(color, "cyan");
-			x1 = 20, y1 = 0, x2 = 20, y2 = 20, x3 = 20, y3 = 40, x4 = 40, y4 = 0;
-			break;
-		case 11:
-			sprintf(color, "cyan");
-			x1 = 0, y1 = 0, x2 = 0, y2 = 20, x3 = 20, y3 = 20, x4 = 40, y4 = 20;
-			break;
-		case 12:
-			sprintf(color, "magenta");
-			x1 = 20, y1 = 0, x2 = 0, y2 = 20, x3 = 20, y3 = 20, x4 = 40, y4 = 20;
-			break;
-		case 13:
-			sprintf(color, "magenta");
-			x1 = 20, y1 = 0, x2 = 0, y2 = 20, x3 = 20, y3 = 20, x4 = 20, y4 = 40;
-			break;
-		case 14:
-			sprintf(color, "magenta");
-			x1 = 0, y1 = 20, x2 = 20, y2 = 20, x3 = 40, y3 = 20, x4 = 20, y4 = 40;
-			break;
-		case 15:
-			sprintf(color, "magenta");
-			x1 = 20, y1 = 0, x2 = 20, y2 = 20, x3 = 20, y3 = 40, x4 = 40, y4 = 20;
-			break;
-		case 16:
-			sprintf(color, "yellow");
-			x1 = 20, y1 = 0, x2 = 20, y2 = 20, x3 = 40, y3 = 20, x4 = 40, y4 = 40;
-			break;
-		case 17:
-			sprintf(color, "yellow");
-			x1 = 20, y1 = 0, x2 = 40, y2 = 0, x3 = 0, y3 = 20, x4 = 20, y4 = 20;
-			break;
-		case 18:
-			sprintf(color, "gray");
-			x1 = 20, y1 = 0, x2 = 0, y2 = 20, x3 = 20, y3 = 20, x4 = 0, y4 = 40;
-			break;
-		case 19:
-			sprintf(color, "gray");
-			x1 = 0, y1 = 0, x2 = 20, y2 = 0, x3 = 20, y3 = 20, x4 = 40, y4 = 20;
-			break;
-	}
-*/
+
 	return color;
 }
 
 void Shape::change(){
 	shape = changeArr[(unsigned int)shape];
-	/*
-	switch(shape){
-		case 1:
-		case 4:
-		case 5:
-		case 6:
-		case 8:
-		case 9:
-		case 10:
-		case 12:
-		case 13:
-		case 14:
-		case 16:
-		case 18:
-			shape++;
-			break;
-		case 2:
-		case 17:
-		case 19:
-			shape--;
-			break;
-		case 7:
-		case 11:
-		case 15:
-			shape -= 3;
-			break;
-	}
-	*/
 	make(shape);
 	g1->move(x1, y1);
 	g2->move(x2, y2);
