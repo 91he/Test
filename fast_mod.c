@@ -25,7 +25,8 @@ T mod_exp(T a, T b, T n){
 }
 
 int main(){
-	int r = mod_exp(2, 102, 7);
-	printf("%d\n", r);
+	int x = mod_mul(2, 5, 7);
+	int y = mod_exp(2, 5, 7);
+	printf("%d, %d\n", x, y);
 	return 0;
 }

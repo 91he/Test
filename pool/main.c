@@ -17,6 +17,6 @@ int main(){
 	for(i = 0; i < 10; ++i){
 		pool_add(pool, handle, num+i);
 	}
-	sleep(6);
+	sleep(5);
 	pool_destroy(pool);
 }
