@@ -19,4 +19,6 @@ int main(){
 	}
 	sleep(5);
 	pool_destroy(pool);
+
+	return 0;
 }
