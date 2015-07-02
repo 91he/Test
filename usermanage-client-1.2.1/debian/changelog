@@ -1,0 +1,26 @@
+usermanage-client (1.2.1-1) unstable; urgency=low
+
+  * Bug repair
+
+ -- levi <91he@sina.com>  Thu, 15 Jan 2015 16:51:31 +0800
+usermanage-client (1.2.0-2) unstable; urgency=low
+
+  * Curl global reset
+
+ -- levi <91he@sina.com>  Mon, 12 Jan 2015 11:35:31 +0800
+usermanage-client (1.2.0-1) unstable; urgency=low
+
+  * Add head image editor
+
+ -- levi <91he@sina.com>  Fri, 9 Jan 2015 09:05:31 +0800
+
+usermanage-client (1.1.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- levi <91he@sina.com>  Thu, 11 Dec 2014 14:43:31 +0800
+usermanage-client (1.1.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- ken <91he@sina.com>  Fri, 05 Dec 2014 17:43:31 +0800

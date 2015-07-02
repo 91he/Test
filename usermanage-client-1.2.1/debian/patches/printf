@@ -1,0 +1,32 @@
+Description: <remove print info>
+ remove printf info
+ .
+ usermanage-client (1.1.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Author: ken <91he@sina.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- usermanage-client-1.1.0.orig/src/main.c
++++ usermanage-client-1.1.0/src/main.c
+@@ -786,7 +786,7 @@ gboolean passwd_cb(GtkWidget *widget, gp
+ 	cJSON_AddItemToObject(obj, "pwd", jnew);
+ 
+ 	buf = cJSON_Print(obj);
+-	printf("%s\n", buf);
++	//printf("%s\n", buf);
+ 	sendreq(sfd, buf);
+ 	free(buf);
+ 

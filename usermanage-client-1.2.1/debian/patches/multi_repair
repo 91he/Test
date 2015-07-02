@@ -1,0 +1,46 @@
+Description: <multipe windows start bugs repair>
+ multipe windows start bugs repair
+ .
+ usermanage-client (1.1.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Author: ken <91he@sina.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- usermanage-client-1.1.0.orig/src/main.c
++++ usermanage-client-1.1.0/src/main.c
+@@ -1243,9 +1243,9 @@ GtkWidget *um_main_box(gpointer user_dat
+  * This function define the login window
+  */
+ GtkWidget *um_main_win(gpointer user_data){
+-	GtkWidget *window;//= NULL;
++	static GtkWidget *window = NULL;
+ 
+-	//if(window) return window;
++	if(window) return window;
+ 
+ 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+ 	gtk_window_set_decorated(GTK_WINDOW(window), FALSE);
+@@ -1796,8 +1796,8 @@ gboolean dialog_show(gpointer user_data)
+ }
+ 
+ gboolean start_main_win(gpointer user_data){
+-	gtk_widget_destroy(cur_win);
+-	cur_win = um_main_win(user_data);
++	if(um_main_win(user_data))
++		gtk_widget_destroy(cur_win);
+ 	return FALSE;
+ }
+ 

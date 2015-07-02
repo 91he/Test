@@ -1,0 +1,21 @@
+autoscan: warning: missing AC_CHECK_FUNCS([mkdir]) wanted by: 
+	.pc/pwd/src/main.c:1551
+	.pc/multi_repair/src/main.c:1553
+	.pc/printf/src/main.c:1553
+	.pc/multi2/src/main.c:1553
+	.pc/sync/src/main.c:1533
+	src/main.c:1660
+autoscan: warning: missing AC_CHECK_FUNCS([strstr]) wanted by: 
+	.pc/pwd/src/main.c:1606
+	.pc/multi_repair/src/main.c:1608
+	.pc/printf/src/main.c:1608
+	.pc/multi2/src/main.c:1608
+	.pc/sync/src/main.c:1588
+	src/main.c:1713
+autoscan: warning: missing AC_CHECK_HEADERS([sys/time.h]) wanted by: 
+	.pc/pwd/src/main.c:5
+	.pc/multi_repair/src/main.c:5
+	.pc/printf/src/main.c:5
+	.pc/multi2/src/main.c:5
+	.pc/sync/src/main.c:5
+	src/main.c:5

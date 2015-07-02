@@ -1,0 +1,15 @@
+Source: usermanage-client
+Section: unknown
+Priority: optional
+Maintainer: ken <91he@sina.com>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev
+Standards-Version: 3.9.4
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://git.debian.org/collab-maint/usermanage-client.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/usermanage-client.git;a=summary
+
+Package: usermanage-client
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

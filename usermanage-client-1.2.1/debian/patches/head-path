@@ -1,0 +1,47 @@
+Description: <modify head image widget>
+ Modify some code to repair some visual bug.
+ .
+ usermanage-client (1.2.0-1) unstable; urgency=low
+ .
+   * Add head image editor
+Author: levi <91he@sina.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- usermanage-client-1.2.0.orig/src/main.c
++++ usermanage-client-1.2.0/src/main.c
+@@ -1202,7 +1202,6 @@ void save_image(GtkButton *button, gpoin
+ 	strcpy(req_infos[3].name, name);
+ 	strcpy(req_infos[3].mail, mail);
+ 	
+-#if 1
+ 	obj = cJSON_CreateObject();
+ 	cJSON *jtype = cJSON_CreateString("7");
+ 	cJSON *jname = cJSON_CreateString(name);
+@@ -1217,7 +1216,6 @@ void save_image(GtkButton *button, gpoin
+ 	free(buf);
+ 
+ 	cJSON_Delete(obj);
+-#endif
+ }
+ 
+ void edit_finish(GtkButton *button, gpointer user_data){
+@@ -2679,6 +2677,7 @@ int process_message(char *buf){
+ 				small = pixbuf_from_local(req_infos[3].name, req_infos[3].mail, TRUE);
+ 				big = pixbuf_from_local(req_infos[3].name, req_infos[3].mail, FALSE);
+ 				gtk_list_store_set(user_model, &cur_iter, COL_IMAGE_SMALL, small, COL_IMAGE_BIG, big, -1);
++				gtk_image_set_from_pixbuf(GTK_IMAGE(info_widgets.head_image), big);
+ 				break;
+ 			default:
+ 				sprintf(prompt_message, "未知错误!");

@@ -1,0 +1,133 @@
+Description: <sync fuction repair>
+ Repair sync function.
+ .
+ usermanage-client (1.1.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Author: ken <91he@sina.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- usermanage-client-1.1.0.orig/src/main.c
++++ usermanage-client-1.1.0/src/main.c
+@@ -562,6 +562,7 @@ gboolean sync_cb(GtkWidget *widget, gpoi
+ 	struct required_widgets *data = user_data;
+ 	const gchar *name = gtk_entry_get_text(GTK_ENTRY(data->name));
+ 	const gchar *mail = gtk_entry_get_text(GTK_ENTRY(data->mail));
++	const gchar *pwd = gtk_entry_get_text(GTK_ENTRY(data->pwd));
+ 
+ 	if(!*name){
+ 		add_class(data->name, "red_border");
+@@ -571,6 +572,10 @@ gboolean sync_cb(GtkWidget *widget, gpoi
+ 		add_class(data->mail, "red_border");
+ 		return FALSE;
+ 	}
++	if(!*pwd){
++		add_class(data->pwd, "red_border");
++		return FALSE;
++	}
+ 	strcpy(req_infos[0].name, name);
+ 	strcpy(req_infos[0].mail, mail);
+ 
+@@ -579,11 +584,13 @@ gboolean sync_cb(GtkWidget *widget, gpoi
+ 	cJSON *juser = cJSON_CreateString(loguser);
+ 	cJSON *jname = cJSON_CreateString(name);
+ 	cJSON *jmail = cJSON_CreateString(mail);
++	cJSON *jpwd = cJSON_CreateString(pwd);
+ 
+ 	cJSON_AddItemToObject(obj, "type", jtype);
+ 	cJSON_AddItemToObject(obj, "uname", juser);
+ 	cJSON_AddItemToObject(obj, "syncname", jname);
+ 	cJSON_AddItemToObject(obj, "email", jmail);
++	cJSON_AddItemToObject(obj, "passwd", jpwd);
+ 
+ 	buf = cJSON_Print(obj);
+ 	sendreq(sfd, buf);
+@@ -598,6 +605,7 @@ GtkWidget *um_sync_page(){
+ 	GtkWidget *box;
+ 	GtkWidget *name_box;
+ 	GtkWidget *mail_box;
++	GtkWidget *pwd_box;
+ 	GtkWidget *btn_box;
+ 	GtkWidget *entry;
+ 	GtkWidget *button;
+@@ -620,8 +628,17 @@ GtkWidget *um_sync_page(){
+ 	gtk_widget_set_size_request(entry, 220, 30);
+ 	gtk_box_pack_start(GTK_BOX(mail_box), entry, FALSE, FALSE, 10);
+ 
++	pwd_box = justify_label(60, 2, "密", "码");
++	gtk_widget_set_halign(pwd_box, GTK_ALIGN_CENTER);
++	entry = gtk_entry_new();
++	gtk_entry_set_visibility(GTK_ENTRY(entry), FALSE);
++	req_widgets.pwd = entry;
++	gtk_widget_set_size_request(entry, 220, 30);
++	gtk_box_pack_start(GTK_BOX(pwd_box), entry, FALSE, FALSE, 10);
++
+ 	g_signal_connect(req_widgets.name, "button-press-event", G_CALLBACK(rm_red_border), NULL);
+ 	g_signal_connect(req_widgets.mail, "button-press-event", G_CALLBACK(rm_red_border), NULL);
++	g_signal_connect(req_widgets.pwd, "button-press-event", G_CALLBACK(rm_red_border), NULL);
+ 
+ 	btn_box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);	
+ 	button = gtk_button_new_with_label("同 步");
+@@ -635,6 +652,7 @@ GtkWidget *um_sync_page(){
+ 
+ 	gtk_box_pack_start(GTK_BOX(box), name_box, FALSE, FALSE, 0);
+ 	gtk_box_pack_start(GTK_BOX(box), mail_box, FALSE, FALSE, 0);
++	gtk_box_pack_start(GTK_BOX(box), pwd_box, FALSE, FALSE, 0);
+ 	gtk_box_pack_start(GTK_BOX(box), btn_box, FALSE, FALSE, 0);
+ 	gtk_widget_show_all(box);
+ 
+@@ -1530,9 +1548,9 @@ void set_conf_dir(){
+ 	sprintf(conf_path, "/home/%s/.umclient", getlogin());
+ 
+ 	if(access(conf_path, F_OK)){
+-		mkdir(conf_path, 0755);
++		mkdir(conf_path, 0700);
+ 		sprintf(regmask, "%s/regmask", conf_path);
+-		creat(regmask, 0744);
++		creat(regmask, 0644);
+ 	}
+ 	sprintf(regmask, "%s/regmask", conf_path);
+ }
+@@ -1671,24 +1689,21 @@ int is_registered(){
+ 
+ char *error_msg_2_gbk(char *msg){
+ 	char *ret;
+-	static char *msgs[6] = {"密码错误!",
++	static char *msgs[7] = {"密码错误!",
+ 							"未知错误!",
+ 							"用户没有权限!",
+ 							"用户已存在!",
+ 							"用户不存在!",
+-							"连接错误"};
++							"连接错误!",
++							"用户名或密码错误!"};
+ 	switch(*msg) {
+ 		case '1':
+-			ret = msgs[0];
+-			break;
+ 		case '3':
+-			ret = msgs[2];
+-			break;
+ 		case '4':
+-			ret = msgs[3];
+-			break;
+ 		case '5':
+-			ret = msgs[4];
++		case '6':
++		case '7':
++			ret = msgs[*msg - '1'];
+ 			break;
+ 		default:
+ 			ret = msgs[1];

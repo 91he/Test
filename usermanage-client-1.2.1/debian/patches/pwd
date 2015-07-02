@@ -1,0 +1,39 @@
+Description: <local register fault repair>
+ repair local register fault.
+ .
+ usermanage-client (1.1.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Author: ken <91he@sina.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- usermanage-client-1.1.0.orig/src/main.c
++++ usermanage-client-1.1.0/src/main.c
+@@ -486,6 +486,7 @@ GtkWidget *um_reg_page(gboolean remote){
+ 	GtkWidget *reg_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 20);
+ 	gtk_widget_set_valign(reg_box, GTK_ALIGN_CENTER);
+ 	//gtk_widget_set_margin_top(reg_box, 50);
++	bzero(req_widgets, sizeof(struct required_widgets));
+ 
+ 	GtkWidget *regname_box = justify_label(64, 3, "用", "户", "名");
+ 	gtk_widget_set_halign(regname_box, GTK_ALIGN_CENTER);
+@@ -785,6 +786,7 @@ gboolean passwd_cb(GtkWidget *widget, gp
+ 	cJSON_AddItemToObject(obj, "pwd", jnew);
+ 
+ 	buf = cJSON_Print(obj);
++	printf("%s\n", buf);
+ 	sendreq(sfd, buf);
+ 	free(buf);
+ 

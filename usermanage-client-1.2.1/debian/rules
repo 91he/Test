@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+DEST_SH_DIR=debian/usermanage-client/tmp
+override_dh_auto_install:
+	dh_auto_install
+	mkdir -p $(DEST_SH_DIR)
+	cp src/*png $(DEST_SH_DIR)
+	cp src/theme.css $(DEST_SH_DIR)
+%:
+	dh $@  --with autotools-dev

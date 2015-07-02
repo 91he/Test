@@ -1,0 +1,80 @@
+Description: <update theme.css file>
+ modify the theme.css file
+ .
+ usermanage-client (1.2.0-1) unstable; urgency=low
+ .
+   * Add head image editor
+Author: levi <91he@sina.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- usermanage-client-1.2.0.orig/src/main.c
++++ usermanage-client-1.2.0/src/main.c
+@@ -708,6 +708,7 @@ GtkWidget *um_sync_page(){
+ void edit_head_image(GtkButton *button, gpointer user_data){
+ 	gtk_notebook_set_current_page(GTK_NOTEBOOK(user_data), 1);
+ 	gtk_widget_hide(list_widget);
++	//gtk_label_set_text(GTK_LABEL(info_label), "自定义头像");
+ }
+ 
+ GtkWidget *um_info_page(gpointer user_data){
+@@ -1235,6 +1236,7 @@ GtkWidget *um_head_editor(){
+ 	GtkWidget *box;
+ 	GtkWidget *rbox;
+ 	GtkWidget *button;
++	GtkWidget *label;
+ 	static struct EditorDrawContext context;
+ 	
+ 	box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+@@ -1265,15 +1267,16 @@ GtkWidget *um_head_editor(){
+ 	g_signal_connect(button, "clicked", G_CALLBACK(save_image), &context);
+ 
+ 	button = gtk_button_new_with_label("返回");
+-	//add_class(button, "editor");
+ 	gtk_box_pack_end(GTK_BOX(rbox), button, FALSE, FALSE, 0);
+ 	g_signal_connect(button, "clicked", G_CALLBACK(edit_finish), &context);
+ 
+ 	button = gtk_button_new_with_label("上传图片");
+-	//add_class(button, "editor");
+ 	gtk_box_pack_end(GTK_BOX(rbox), button, FALSE, FALSE, 100);
+ 	g_signal_connect(button, "clicked", G_CALLBACK(choose_image), &context);
+ 
++	label = gtk_label_new("预览");
++	gtk_box_pack_end(GTK_BOX(rbox), label, FALSE, FALSE, 0);
++
+ 	gtk_box_pack_start(GTK_BOX(box), context.widget, FALSE, FALSE, 0);
+ 	gtk_box_pack_start(GTK_BOX(box), rbox, TRUE, TRUE, 0);
+ 	
+--- usermanage-client-1.2.0.orig/src/theme.css
++++ usermanage-client-1.2.0/src/theme.css
+@@ -290,14 +290,15 @@ GtkButton.selection_focused {
+ 	border-style: solid;
+ 	border-color: rgba(20, 20, 20, 0.2);
+ 	border-top-width: 1px;
++	background-color: #cbe8cc;
+ }
+ 
+-.editor GtkButton:hover {
+-	background-color: #218ac3;
++.editor GtkButton * {
++	color: #65e5b8;
+ }
+ 
+-.editor GtkButton * {
+-	color: red;
++.editor GtkButton:hover {
++	background-color: #218ac3;
+ }
+ 
+ .editor GtkButton:active {

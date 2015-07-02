@@ -1,0 +1,6 @@
+src/usermanageclient
+src/usermanageclient-main.o
+src/usermanageclient-cJSON.o
+src/usermanageclient-pool.o
+src/usermanageclient-scrwin.o
+src/usermanageclient-form_check.o

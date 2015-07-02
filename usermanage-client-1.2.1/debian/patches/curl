@@ -1,0 +1,33 @@
+Description: <about curl global>
+ Something may error about curl_global_cleanup().
+ .
+ usermanage-client (1.2.0-1) unstable; urgency=low
+ .
+   * Curl global reset
+Author: levi <91he@sina.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- usermanage-client-1.2.0.orig/src/main.c
++++ usermanage-client-1.2.0/src/main.c
+@@ -2534,8 +2534,8 @@ int main(int argc, char **argv){
+ 	pthread_t message_thread;
+ 	pthread_create(&message_thread, NULL, message_main, NULL);
+ 
+-	curl_global_cleanup();
+ 	gtk_main();
++	curl_global_cleanup();
+ 	pool_destroy(gtk_pool);
+ 
+ 	return 0;
