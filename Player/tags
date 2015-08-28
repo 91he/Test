@@ -1,0 +1,1027 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AddNPID	npn_funcs.c	/^static NPIdentifier AddNPID(const char *name){$/;"	f	file:
+BOOLEAN_TO_NPVARIANT	npruntime.h	149;"	d
+BPSupportedMIMETypes	npfunctions.h	/^} BPSupportedMIMETypes;$/;"	t	typeref:struct:_BPSupportedMIMETypes
+BP_GetSupportedMIMETypesProcPtr	npfunctions.h	/^typedef OSErr (*BP_GetSupportedMIMETypesProcPtr)(BPSupportedMIMETypes*, UInt32);$/;"	t
+CURL_HTTP_GET	curl_url.h	/^    CURL_HTTP_GET,$/;"	e	enum:__anon1
+CURL_HTTP_POST	curl_url.h	/^    CURL_HTTP_POST$/;"	e	enum:__anon1
+CURL_HTTP_TYPE	curl_url.h	/^}CURL_HTTP_TYPE;$/;"	t	typeref:enum:__anon1
+CURL_URL_H	curl_url.h	2;"	d
+DOUBLE_TO_NPVARIANT	npruntime.h	161;"	d
+DXP_UNIX	Makefile	/^	gcc main.c npp_funcs.c npn_funcs.c pool.c curl_url.c -DXP_UNIX=1 -DMOZ_X11=1 -fPIC -ldl -g -o player `pkg-config --libs --cflags gtk+-2.0` -lcurl$/;"	m
+DestroyStream	player.c	/^NPError DestroyStream( NPP instance, NPStream* stream, NPReason reason ) {$/;"	f
+Evaluate	player.c	/^bool Evaluate( NPP npp, NPObject *npobj, NPString *script, NPVariant *result ) {$/;"	f
+FLASH_PLUGIN_SO	player.c	18;"	d	file:
+FLASH_REQUEST	npn_funcs.c	8;"	d	file:
+FLASH_REQUEST	player.c	33;"	d	file:
+FSCMD	player.c	34;"	d	file:
+ForceRedraw	player.c	/^void ForceRedraw( NPP instance ) {$/;"	f
+GetIntIdentifier	player.c	/^NPIdentifier GetIntIdentifier( int32_t intid ) {$/;"	f
+GetJavaEnv	player.c	/^void * GetJavaEnv(void) {$/;"	f
+GetJavaPeer	player.c	/^void * GetJavaPeer( NPP instance ) {$/;"	f
+GetStringIdentifiers	player.c	/^void GetStringIdentifiers( const NPUTF8 **names, int32_t nameCount, NPIdentifier *identifiers ) {$/;"	f
+HLIST_HEAD	list.h	386;"	d
+HLIST_HEAD_INIT	list.h	385;"	d
+INIT_HLIST_HEAD	list.h	387;"	d
+INIT_HLIST_NODE	list.h	388;"	d
+INIT_LIST_HEAD	list.h	73;"	d
+INT32_TO_NPVARIANT	npruntime.h	155;"	d
+INVOKE_RESPONSE	player.c	35;"	d	file:
+IdentifierIsString	player.c	/^bool IdentifierIsString( NPIdentifier id ) {$/;"	f
+IntFromIdentifier	player.c	/^int32_t IntFromIdentifier( NPIdentifier id ) {$/;"	f
+InvalidateRegion	player.c	/^void InvalidateRegion( NPP instance, NPRegion invalidRegion ) {$/;"	f
+JS_CALL_START	player.c	569;"	d	file:
+JS_RESULT_START	player.c	570;"	d	file:
+LIST_HEAD	list.h	70;"	d
+LIST_HEAD_INIT	list.h	68;"	d
+LIST_POISON1	list.h	52;"	d
+LIST_POISON2	list.h	53;"	d
+MOZ_X11	player.c	12;"	d	file:
+MatchNPID	npn_funcs.c	/^static bool MatchNPID(NPIdentifier id, char *name){$/;"	f	file:
+MemFlush	player.c	/^uint32_t MemFlush( uint32_t size ) {$/;"	f
+MyNPID	npn_funcs.c	/^struct MyNPID{$/;"	s	file:
+My_NPAllocate	npn_funcs.c	/^NPObject *My_NPAllocate(NPP npp, NPClass *aClass){$/;"	f
+My_NPConstruct	npn_funcs.c	/^bool My_NPConstruct(NPObject *npobj,$/;"	f
+My_NPDeallocate	npn_funcs.c	/^static void My_NPDeallocate(NPObject *npobj){$/;"	f	file:
+My_NPEnumeration	npn_funcs.c	/^bool My_NPEnumeration(NPObject *npobj, NPIdentifier **value,$/;"	f
+My_NPGetProperty	npn_funcs.c	/^bool My_NPGetProperty(NPObject *npobj, NPIdentifier name,$/;"	f
+My_NPHasMethod	npn_funcs.c	/^bool My_NPHasMethod(NPObject *npobj, NPIdentifier name){$/;"	f
+My_NPHasProperty	npn_funcs.c	/^bool My_NPHasProperty(NPObject *npobj, NPIdentifier name){$/;"	f
+My_NPInvalidate	npn_funcs.c	/^static void My_NPInvalidate(NPObject *npobj){$/;"	f	file:
+My_NPInvoke	npn_funcs.c	/^bool My_NPInvoke(NPObject *npobj, NPIdentifier name,$/;"	f
+My_NPInvokeDefault	npn_funcs.c	/^bool My_NPInvokeDefault(NPObject *npobj,$/;"	f
+My_NPN_Construct	npn_funcs.c	/^bool My_NPN_Construct(NPP npp, NPObject* obj, const NPVariant *args, uint32_t argCount, NPVariant *result){$/;"	f
+My_NPN_ConvertPoint	npn_funcs.c	/^NPBool My_NPN_ConvertPoint(NPP instance, double sourceX, double sourceY,$/;"	f
+My_NPN_CreateObject	npn_funcs.c	/^NPObject* My_NPN_CreateObject(NPP npp, NPClass *aClass){$/;"	f
+My_NPN_DestroyStream	npn_funcs.c	/^NPError My_NPN_DestroyStream(NPP instance, NPStream* stream,$/;"	f
+My_NPN_Enumerate	npn_funcs.c	/^bool My_NPN_Enumerate(NPP npp, NPObject *obj, NPIdentifier **identifier, uint32_t *count){$/;"	f
+My_NPN_Evaluate	npn_funcs.c	/^bool My_NPN_Evaluate(NPP npp, NPObject *obj, NPString *script, NPVariant *result){$/;"	f
+My_NPN_FinalizeAsyncSurface	npn_funcs.c	/^NPError My_NPN_FinalizeAsyncSurface(NPP instance, NPAsyncSurface *surface){$/;"	f
+My_NPN_ForceRedraw	npn_funcs.c	/^void My_NPN_ForceRedraw(NPP instance){$/;"	f
+My_NPN_GetAuthenticationInfo	npn_funcs.c	/^NPError My_NPN_GetAuthenticationInfo(NPP instance,$/;"	f
+My_NPN_GetIntIdentifier	npn_funcs.c	/^NPIdentifier My_NPN_GetIntIdentifier(int32_t intid){$/;"	f
+My_NPN_GetProperty	npn_funcs.c	/^bool My_NPN_GetProperty(NPP npp, NPObject *obj, NPIdentifier propertyName, NPVariant *result){$/;"	f
+My_NPN_GetStringIdentifier	npn_funcs.c	/^NPIdentifier My_NPN_GetStringIdentifier(const NPUTF8* name){$/;"	f
+My_NPN_GetStringIdentifiers	npn_funcs.c	/^void My_NPN_GetStringIdentifiers(const NPUTF8** names, int32_t nameCount, NPIdentifier* identifiers){$/;"	f
+My_NPN_GetURL	npn_funcs.c	/^NPError My_NPN_GetURL(NPP instance, const char* url,$/;"	f
+My_NPN_GetURLNotify	npn_funcs.c	/^NPError My_NPN_GetURLNotify(NPP instance, const char* url,$/;"	f
+My_NPN_GetValue	npn_funcs.c	/^NPError My_NPN_GetValue(NPP instance, NPNVariable variable, void *value){$/;"	f
+My_NPN_GetValueForURL	npn_funcs.c	/^NPError My_NPN_GetValueForURL(NPP instance, NPNURLVariable variable,$/;"	f
+My_NPN_HandleEvent	npn_funcs.c	/^NPBool My_NPN_HandleEvent(NPP instance, void *event, NPBool handled){$/;"	f
+My_NPN_HasMethod	npn_funcs.c	/^bool My_NPN_HasMethod(NPP npp, NPObject *obj, NPIdentifier propertyName){$/;"	f
+My_NPN_HasProperty	npn_funcs.c	/^bool My_NPN_HasProperty(NPP npp, NPObject *obj, NPIdentifier propertyName){$/;"	f
+My_NPN_IdentifierIsString	npn_funcs.c	/^bool My_NPN_IdentifierIsString(NPIdentifier identifier){$/;"	f
+My_NPN_InitAsyncSurface	npn_funcs.c	/^NPError My_NPN_InitAsyncSurface(NPP instance, NPSize *size,$/;"	f
+My_NPN_IntFromIdentifier	npn_funcs.c	/^int32_t My_NPN_IntFromIdentifier(NPIdentifier identifier){$/;"	f
+My_NPN_InvalidateRect	npn_funcs.c	/^void My_NPN_InvalidateRect(NPP instance, NPRect *invalidRect){$/;"	f
+My_NPN_InvalidateRegion	npn_funcs.c	/^void My_NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion){$/;"	f
+My_NPN_Invoke	npn_funcs.c	/^bool My_NPN_Invoke(NPP npp, NPObject* obj, NPIdentifier methodName, const NPVariant *args, uint32_t argCount, NPVariant *result){$/;"	f
+My_NPN_InvokeDefault	npn_funcs.c	/^bool My_NPN_InvokeDefault(NPP npp, NPObject* obj, const NPVariant *args, uint32_t argCount, NPVariant *result){$/;"	f
+My_NPN_MemAlloc	npn_funcs.c	/^void* My_NPN_MemAlloc(uint32_t size){$/;"	f
+My_NPN_MemFlush	npn_funcs.c	/^uint32_t My_NPN_MemFlush(uint32_t size){$/;"	f
+My_NPN_MemFree	npn_funcs.c	/^void My_NPN_MemFree(void* ptr){$/;"	f
+My_NPN_NewStream	npn_funcs.c	/^NPError My_NPN_NewStream(NPP instance, NPMIMEType type,$/;"	f
+My_NPN_PluginThreadAsyncCall	npn_funcs.c	/^void My_NPN_PluginThreadAsyncCall(NPP instance,$/;"	f
+My_NPN_PopPopupsEnabledState	npn_funcs.c	/^void My_NPN_PopPopupsEnabledState(NPP instance){$/;"	f
+My_NPN_PopUpContextMenu	npn_funcs.c	/^NPError My_NPN_PopUpContextMenu(NPP instance, NPMenu* menu){$/;"	f
+My_NPN_PostURL	npn_funcs.c	/^NPError My_NPN_PostURL(NPP instance, const char* url,$/;"	f
+My_NPN_PostURLNotify	npn_funcs.c	/^NPError My_NPN_PostURLNotify(NPP instance, const char* url,$/;"	f
+My_NPN_PushPopupsEnabledState	npn_funcs.c	/^void My_NPN_PushPopupsEnabledState(NPP instance, NPBool enabled){$/;"	f
+My_NPN_ReleaseObject	npn_funcs.c	/^void My_NPN_ReleaseObject(NPObject *obj){$/;"	f
+My_NPN_ReleaseVariantValue	npn_funcs.c	/^void My_NPN_ReleaseVariantValue(NPVariant *variant){$/;"	f
+My_NPN_ReloadPlugins	npn_funcs.c	/^void My_NPN_ReloadPlugins(NPBool reloadPages){$/;"	f
+My_NPN_RemoveProperty	npn_funcs.c	/^bool My_NPN_RemoveProperty(NPP npp, NPObject *obj, NPIdentifier propertyName){$/;"	f
+My_NPN_RequestRead	npn_funcs.c	/^NPError My_NPN_RequestRead(NPStream* stream, NPByteRange* rangeList){$/;"	f
+My_NPN_RetainObject	npn_funcs.c	/^NPObject* My_NPN_RetainObject(NPObject *obj){$/;"	f
+My_NPN_ScheduleTimer	npn_funcs.c	/^uint32_t My_NPN_ScheduleTimer(NPP instance,$/;"	f
+My_NPN_SetCurrentAsyncSurface	npn_funcs.c	/^void My_NPN_SetCurrentAsyncSurface(NPP instance, NPAsyncSurface *surface, NPRect *changed){$/;"	f
+My_NPN_SetException	npn_funcs.c	/^void My_NPN_SetException(NPObject *obj, const NPUTF8 *message){$/;"	f
+My_NPN_SetProperty	npn_funcs.c	/^bool My_NPN_SetProperty(NPP npp, NPObject *obj, NPIdentifier propertyName, const NPVariant *value){$/;"	f
+My_NPN_SetValue	npn_funcs.c	/^NPError My_NPN_SetValue(NPP instance, NPPVariable variable, void *value){$/;"	f
+My_NPN_SetValueForURL	npn_funcs.c	/^NPError My_NPN_SetValueForURL(NPP instance, NPNURLVariable variable,$/;"	f
+My_NPN_Status	npn_funcs.c	/^void My_NPN_Status(NPP instance, const char* message){$/;"	f
+My_NPN_URLRedirectResponse	npn_funcs.c	/^void My_NPN_URLRedirectResponse(NPP instance, void* notifyData, NPBool allow){$/;"	f
+My_NPN_UTF8FromIdentifier	npn_funcs.c	/^NPUTF8* My_NPN_UTF8FromIdentifier(NPIdentifier identifier){$/;"	f
+My_NPN_UnfocusInstance	npn_funcs.c	/^NPBool My_NPN_UnfocusInstance(NPP instance, NPFocusDirection direction){$/;"	f
+My_NPN_UnscheduleTimer	npn_funcs.c	/^void My_NPN_UnscheduleTimer(NPP instance, uint32_t timerID){$/;"	f
+My_NPN_UserAgent	npn_funcs.c	/^const char* My_NPN_UserAgent(NPP instance){$/;"	f
+My_NPN_Write	npn_funcs.c	/^int32_t My_NPN_Write(NPP instance, NPStream* stream,$/;"	f
+My_NPP_ClearSiteData	npp_funcs.c	/^NPP_ClearSiteDataPtr My_NPP_ClearSiteData;$/;"	v
+My_NPP_Destroy	npp_funcs.c	/^NPP_DestroyProcPtr My_NPP_Destroy;$/;"	v
+My_NPP_DestroyStream	npp_funcs.c	/^NPP_DestroyStreamProcPtr My_NPP_DestroyStream;$/;"	v
+My_NPP_DidComposite	npp_funcs.c	/^NPP_DidCompositePtr My_NPP_DidComposite;$/;"	v
+My_NPP_GetSitesWithData	npp_funcs.c	/^NPP_GetSitesWithDataPtr My_NPP_GetSitesWithData;$/;"	v
+My_NPP_GetValue	npp_funcs.c	/^NPP_GetValueProcPtr My_NPP_GetValue;$/;"	v
+My_NPP_GotFocus	npp_funcs.c	/^NPP_GotFocusPtr My_NPP_GotFocus;$/;"	v
+My_NPP_HandleEvent	npp_funcs.c	/^NPP_HandleEventProcPtr My_NPP_HandleEvent;$/;"	v
+My_NPP_LostFocus	npp_funcs.c	/^NPP_LostFocusPtr My_NPP_LostFocus;$/;"	v
+My_NPP_New	npp_funcs.c	/^NPP_NewProcPtr My_NPP_New;$/;"	v
+My_NPP_NewStream	npp_funcs.c	/^NPP_NewStreamProcPtr My_NPP_NewStream;$/;"	v
+My_NPP_Print	npp_funcs.c	/^NPP_PrintProcPtr My_NPP_Print;$/;"	v
+My_NPP_SetValue	npp_funcs.c	/^NPP_SetValueProcPtr My_NPP_SetValue;$/;"	v
+My_NPP_SetWindow	npp_funcs.c	/^NPP_SetWindowProcPtr My_NPP_SetWindow;$/;"	v
+My_NPP_StreamAsFile	npp_funcs.c	/^NPP_StreamAsFileProcPtr My_NPP_StreamAsFile;$/;"	v
+My_NPP_URLNotify	npp_funcs.c	/^NPP_URLNotifyProcPtr My_NPP_URLNotify;$/;"	v
+My_NPP_URLRedirectNotify	npp_funcs.c	/^NPP_URLRedirectNotifyPtr My_NPP_URLRedirectNotify;$/;"	v
+My_NPP_Write	npp_funcs.c	/^NPP_WriteProcPtr My_NPP_Write;$/;"	v
+My_NPP_WriteReady	npp_funcs.c	/^NPP_WriteReadyProcPtr My_NPP_WriteReady;$/;"	v
+My_NPRemoveProperty	npn_funcs.c	/^bool My_NPRemoveProperty(NPObject *npobj, NPIdentifier name){$/;"	f
+My_NPSetProperty	npn_funcs.c	/^bool My_NPSetProperty(NPObject *npobj, NPIdentifier name,$/;"	f
+My_NP_Initialize	npp_funcs.c	/^NP_InitializeFunc My_NP_Initialize;$/;"	v
+My_NP_Shutdown	npp_funcs.c	/^NP_ShutdownFunc My_NP_Shutdown;$/;"	v
+NO_IDENTIFIER	player.c	29;"	d	file:
+NPAllocateFunctionPtr	npruntime.h	/^typedef NPObject *(*NPAllocateFunctionPtr)(NPP npp, NPClass *aClass);$/;"	t
+NPAnyCallbackStruct	npapi.h	/^} NPAnyCallbackStruct;$/;"	t	typeref:struct:__anon8
+NPAsyncSurface	npapi.h	/^} NPAsyncSurface;$/;"	t	typeref:struct:_NPAsyncSurface
+NPBool	npapi.h	/^typedef unsigned char NPBool;$/;"	t
+NPByteRange	npapi.h	/^} NPByteRange;$/;"	t	typeref:struct:_NPByteRange
+NPCGRegion	npapi.h	/^typedef CGPathRef NPCGRegion;$/;"	t
+NPClass	npruntime.h	/^struct NPClass$/;"	s
+NPClass	npruntime.h	/^typedef struct NPClass NPClass;$/;"	t	typeref:struct:NPClass
+NPCocoaEvent	npapi.h	/^} NPCocoaEvent;$/;"	t	typeref:struct:_NPCocoaEvent
+NPCocoaEventDrawRect	npapi.h	/^  NPCocoaEventDrawRect = 1,$/;"	e	enum:__anon20
+NPCocoaEventFlagsChanged	npapi.h	/^  NPCocoaEventFlagsChanged,$/;"	e	enum:__anon20
+NPCocoaEventFocusChanged	npapi.h	/^  NPCocoaEventFocusChanged,$/;"	e	enum:__anon20
+NPCocoaEventKeyDown	npapi.h	/^  NPCocoaEventKeyDown,$/;"	e	enum:__anon20
+NPCocoaEventKeyUp	npapi.h	/^  NPCocoaEventKeyUp,$/;"	e	enum:__anon20
+NPCocoaEventMouseDown	npapi.h	/^  NPCocoaEventMouseDown,$/;"	e	enum:__anon20
+NPCocoaEventMouseDragged	npapi.h	/^  NPCocoaEventMouseDragged,$/;"	e	enum:__anon20
+NPCocoaEventMouseEntered	npapi.h	/^  NPCocoaEventMouseEntered,$/;"	e	enum:__anon20
+NPCocoaEventMouseExited	npapi.h	/^  NPCocoaEventMouseExited,$/;"	e	enum:__anon20
+NPCocoaEventMouseMoved	npapi.h	/^  NPCocoaEventMouseMoved,$/;"	e	enum:__anon20
+NPCocoaEventMouseUp	npapi.h	/^  NPCocoaEventMouseUp,$/;"	e	enum:__anon20
+NPCocoaEventScrollWheel	npapi.h	/^  NPCocoaEventScrollWheel,$/;"	e	enum:__anon20
+NPCocoaEventTextInput	npapi.h	/^  NPCocoaEventTextInput$/;"	e	enum:__anon20
+NPCocoaEventType	npapi.h	/^} NPCocoaEventType;$/;"	t	typeref:enum:__anon20
+NPCocoaEventWindowFocusChanged	npapi.h	/^  NPCocoaEventWindowFocusChanged,$/;"	e	enum:__anon20
+NPConstructFunctionPtr	npruntime.h	/^typedef bool (*NPConstructFunctionPtr)(NPObject *npobj,$/;"	t
+NPCoordinateSpace	npapi.h	/^} NPCoordinateSpace;$/;"	t	typeref:enum:__anon19
+NPCoordinateSpaceFlippedScreen	npapi.h	/^  NPCoordinateSpaceFlippedScreen$/;"	e	enum:__anon19
+NPCoordinateSpaceFlippedWindow	npapi.h	/^  NPCoordinateSpaceFlippedWindow,$/;"	e	enum:__anon19
+NPCoordinateSpacePlugin	npapi.h	/^  NPCoordinateSpacePlugin = 1,$/;"	e	enum:__anon19
+NPCoordinateSpaceScreen	npapi.h	/^  NPCoordinateSpaceScreen,$/;"	e	enum:__anon19
+NPCoordinateSpaceWindow	npapi.h	/^  NPCoordinateSpaceWindow,$/;"	e	enum:__anon19
+NPDeallocateFunctionPtr	npruntime.h	/^typedef void (*NPDeallocateFunctionPtr)(NPObject *npobj);$/;"	t
+NPDrawingModel	npapi.h	/^} NPDrawingModel;$/;"	t	typeref:enum:__anon11
+NPDrawingModelAsyncBitmapSurface	npapi.h	/^  NPDrawingModelAsyncBitmapSurface = 7$/;"	e	enum:__anon11
+NPDrawingModelAsyncWindowsDXGISurface	npapi.h	/^  , NPDrawingModelAsyncWindowsDXGISurface = 8$/;"	e	enum:__anon11
+NPDrawingModelCoreAnimation	npapi.h	/^  NPDrawingModelCoreAnimation = 3,$/;"	e	enum:__anon11
+NPDrawingModelCoreGraphics	npapi.h	/^  NPDrawingModelCoreGraphics = 1,$/;"	e	enum:__anon11
+NPDrawingModelInvalidatingCoreAnimation	npapi.h	/^  NPDrawingModelInvalidatingCoreAnimation = 4,$/;"	e	enum:__anon11
+NPDrawingModelOpenGL	npapi.h	/^  NPDrawingModelOpenGL = 2,$/;"	e	enum:__anon11
+NPDrawingModelQuickDraw	npapi.h	/^  NPDrawingModelQuickDraw = 0,$/;"	e	enum:__anon11
+NPDrawingModelSyncWin	npapi.h	/^  NPDrawingModelSyncWin = 5,$/;"	e	enum:__anon11
+NPDrawingModelSyncX	npapi.h	/^  NPDrawingModelSyncX = 6,$/;"	e	enum:__anon11
+NPERR_BASE	npapi.h	766;"	d
+NPERR_FILE_NOT_FOUND	npapi.h	778;"	d
+NPERR_GENERIC_ERROR	npapi.h	768;"	d
+NPERR_INCOMPATIBLE_VERSION_ERROR	npapi.h	775;"	d
+NPERR_INVALID_FUNCTABLE_ERROR	npapi.h	770;"	d
+NPERR_INVALID_INSTANCE_ERROR	npapi.h	769;"	d
+NPERR_INVALID_PARAM	npapi.h	776;"	d
+NPERR_INVALID_PLUGIN_DIR_ERROR	npapi.h	774;"	d
+NPERR_INVALID_PLUGIN_ERROR	npapi.h	773;"	d
+NPERR_INVALID_URL	npapi.h	777;"	d
+NPERR_MALFORMED_SITE	npapi.h	782;"	d
+NPERR_MODULE_LOAD_FAILED_ERROR	npapi.h	771;"	d
+NPERR_NO_DATA	npapi.h	779;"	d
+NPERR_NO_ERROR	npapi.h	767;"	d
+NPERR_OUT_OF_MEMORY_ERROR	npapi.h	772;"	d
+NPERR_STREAM_NOT_SEEKABLE	npapi.h	780;"	d
+NPERR_TIME_RANGE_NOT_SUPPORTED	npapi.h	781;"	d
+NPEmbedPrint	npapi.h	/^} NPEmbedPrint;$/;"	t	typeref:struct:_NPEmbedPrint
+NPEnumerationFunctionPtr	npruntime.h	/^typedef bool (*NPEnumerationFunctionPtr)(NPObject *npobj, NPIdentifier **value,$/;"	t
+NPError	npapi.h	/^typedef int16_t       NPError;$/;"	t
+NPEvent	npapi.h	/^typedef EventRecord NPEvent;$/;"	t
+NPEvent	npapi.h	/^typedef QEvent NPEvent;$/;"	t
+NPEvent	npapi.h	/^typedef XEvent NPEvent;$/;"	t
+NPEvent	npapi.h	/^typedef void*  NPEvent;$/;"	t
+NPEvent	npapi.h	/^} NPEvent;$/;"	t	typeref:struct:_NPEvent
+NPEventModel	npapi.h	/^} NPEventModel;$/;"	t	typeref:enum:__anon12
+NPEventModelCarbon	npapi.h	/^  NPEventModelCarbon = 0,$/;"	e	enum:__anon12
+NPEventModelCocoa	npapi.h	/^  NPEventModelCocoa = 1$/;"	e	enum:__anon12
+NPEventType	npapi.h	/^enum NPEventType {$/;"	g
+NPEventType_AdjustCursorEvent	npapi.h	/^  NPEventType_AdjustCursorEvent,$/;"	e	enum:NPEventType
+NPEventType_ClippingChangedEvent	npapi.h	/^  NPEventType_ClippingChangedEvent,$/;"	e	enum:NPEventType
+NPEventType_GetFocusEvent	npapi.h	/^  NPEventType_GetFocusEvent = (osEvt + 16),$/;"	e	enum:NPEventType
+NPEventType_LoseFocusEvent	npapi.h	/^  NPEventType_LoseFocusEvent,$/;"	e	enum:NPEventType
+NPEventType_MenuCommandEvent	npapi.h	/^  NPEventType_MenuCommandEvent,$/;"	e	enum:NPEventType
+NPEventType_ScrollingBeginsEvent	npapi.h	/^  NPEventType_ScrollingBeginsEvent = 1000,$/;"	e	enum:NPEventType
+NPEventType_ScrollingEndsEvent	npapi.h	/^  NPEventType_ScrollingEndsEvent$/;"	e	enum:NPEventType
+NPFocusDirection	npapi.h	/^} NPFocusDirection;$/;"	t	typeref:enum:__anon3
+NPFocusNext	npapi.h	/^  NPFocusNext = 0,$/;"	e	enum:__anon3
+NPFocusPrevious	npapi.h	/^  NPFocusPrevious = 1$/;"	e	enum:__anon3
+NPFullPrint	npapi.h	/^} NPFullPrint;$/;"	t	typeref:struct:_NPFullPrint
+NPGetPropertyFunctionPtr	npruntime.h	/^typedef bool (*NPGetPropertyFunctionPtr)(NPObject *npobj, NPIdentifier name,$/;"	t
+NPHasMethodFunctionPtr	npruntime.h	/^typedef bool (*NPHasMethodFunctionPtr)(NPObject *npobj, NPIdentifier name);$/;"	t
+NPHasPropertyFunctionPtr	npruntime.h	/^typedef bool (*NPHasPropertyFunctionPtr)(NPObject *npobj, NPIdentifier name);$/;"	t
+NPIdentifier	npruntime.h	/^typedef void *NPIdentifier;$/;"	t
+NPImageExpose	npapi.h	/^} NPImageExpose;$/;"	t	typeref:struct:_NPImageExpose
+NPImageFormat	npapi.h	/^} NPImageFormat;$/;"	t	typeref:enum:__anon4
+NPImageFormatBGRA32	npapi.h	/^  NPImageFormatBGRA32     = 0x1,$/;"	e	enum:__anon4
+NPImageFormatBGRX32	npapi.h	/^  NPImageFormatBGRX32     = 0x2 $/;"	e	enum:__anon4
+NPInvalidateFunctionPtr	npruntime.h	/^typedef void (*NPInvalidateFunctionPtr)(NPObject *npobj);$/;"	t
+NPInvokeDefaultFunctionPtr	npruntime.h	/^typedef bool (*NPInvokeDefaultFunctionPtr)(NPObject *npobj,$/;"	t
+NPInvokeFunctionPtr	npruntime.h	/^typedef bool (*NPInvokeFunctionPtr)(NPObject *npobj, NPIdentifier name,$/;"	t
+NPMIMEType	npapi.h	/^typedef char*         NPMIMEType;$/;"	t
+NPMenu	npapi.h	/^typedef NPNSMenu NPMenu;$/;"	t
+NPMenu	npapi.h	/^typedef void *NPMenu;$/;"	t
+NPNSMenu	npapi.h	/^typedef struct _NPNSMenu   NPNSMenu;$/;"	t	typeref:struct:_NPNSMenu
+NPNSString	npapi.h	/^typedef struct _NPNSString NPNSString;$/;"	t	typeref:struct:_NPNSString
+NPNSWindow	npapi.h	/^typedef struct _NPNSWindow NPNSWindow;$/;"	t	typeref:struct:_NPNSWindow
+NPNToolkitType	npapi.h	/^} NPNToolkitType;$/;"	t	typeref:enum:__anon16
+NPNURLVCookie	npapi.h	/^  NPNURLVCookie = 501,$/;"	e	enum:__anon15
+NPNURLVProxy	npapi.h	/^  NPNURLVProxy$/;"	e	enum:__anon15
+NPNURLVariable	npapi.h	/^} NPNURLVariable;$/;"	t	typeref:enum:__anon15
+NPNVDOMElement	npapi.h	/^  NPNVDOMElement     = (11 | NP_ABI_MASK),$/;"	e	enum:__anon14
+NPNVDOMWindow	npapi.h	/^  NPNVDOMWindow      = (12 | NP_ABI_MASK),$/;"	e	enum:__anon14
+NPNVGtk12	npapi.h	/^  NPNVGtk12 = 1,$/;"	e	enum:__anon16
+NPNVGtk2	npapi.h	/^  NPNVGtk2$/;"	e	enum:__anon16
+NPNVPluginElementNPObject	npapi.h	/^  NPNVPluginElementNPObject = 16,$/;"	e	enum:__anon14
+NPNVSupportsWindowless	npapi.h	/^  NPNVSupportsWindowless = 17,$/;"	e	enum:__anon14
+NPNVSupportsWindowlessLocal	npapi.h	/^  , NPNVSupportsWindowlessLocal = 2002$/;"	e	enum:__anon14
+NPNVSupportsXEmbedBool	npapi.h	/^  NPNVSupportsXEmbedBool = 14,$/;"	e	enum:__anon14
+NPNVToolkit	npapi.h	/^  NPNVToolkit        = (13 | NP_ABI_MASK),$/;"	e	enum:__anon14
+NPNVWindowNPObject	npapi.h	/^  NPNVWindowNPObject = 15,$/;"	e	enum:__anon14
+NPNVariable	npapi.h	/^} NPNVariable;$/;"	t	typeref:enum:__anon14
+NPNVasdEnabledBool	npapi.h	/^  NPNVasdEnabledBool,$/;"	e	enum:__anon14
+NPNVcontentsScaleFactor	npapi.h	/^  , NPNVcontentsScaleFactor = 1001$/;"	e	enum:__anon14
+NPNVdocumentOrigin	npapi.h	/^  NPNVdocumentOrigin = 22,$/;"	e	enum:__anon14
+NPNVisOfflineBool	npapi.h	/^  NPNVisOfflineBool,$/;"	e	enum:__anon14
+NPNVjavascriptEnabledBool	npapi.h	/^  NPNVjavascriptEnabledBool,$/;"	e	enum:__anon14
+NPNVnetscapeWindow	npapi.h	/^  NPNVnetscapeWindow,$/;"	e	enum:__anon14
+NPNVpluginDrawingModel	npapi.h	/^  NPNVpluginDrawingModel = 1000 \/* Get the current drawing model (NPDrawingModel) *\/$/;"	e	enum:__anon14
+NPNVprivateModeBool	npapi.h	/^  NPNVprivateModeBool = 18,$/;"	e	enum:__anon14
+NPNVserviceManager	npapi.h	/^  NPNVserviceManager = (10 | NP_ABI_MASK),$/;"	e	enum:__anon14
+NPNVsupportsAdvancedKeyHandling	npapi.h	/^  NPNVsupportsAdvancedKeyHandling = 21,$/;"	e	enum:__anon14
+NPNVsupportsAsyncBitmapSurfaceBool	npapi.h	/^  , NPNVsupportsAsyncBitmapSurfaceBool = 2007$/;"	e	enum:__anon14
+NPNVsupportsAsyncWindowsDXGISurfaceBool	npapi.h	/^  , NPNVsupportsAsyncWindowsDXGISurfaceBool = 2008$/;"	e	enum:__anon14
+NPNVsupportsCarbonBool	npapi.h	/^  , NPNVsupportsCarbonBool = 3000 \/* TRUE if the browser supports the Carbon event model *\/$/;"	e	enum:__anon14
+NPNVsupportsCocoaBool	npapi.h	/^  , NPNVsupportsCocoaBool = 3001 \/* TRUE if the browser supports the Cocoa event model *\/$/;"	e	enum:__anon14
+NPNVsupportsCompositingCoreAnimationPluginsBool	npapi.h	/^  , NPNVsupportsCompositingCoreAnimationPluginsBool = 74656 \/* TRUE if the browser supports$/;"	e	enum:__anon14
+NPNVsupportsCoreAnimationBool	npapi.h	/^  , NPNVsupportsCoreAnimationBool = 2003$/;"	e	enum:__anon14
+NPNVsupportsCoreGraphicsBool	npapi.h	/^  , NPNVsupportsCoreGraphicsBool = 2001$/;"	e	enum:__anon14
+NPNVsupportsInvalidatingCoreAnimationBool	npapi.h	/^  , NPNVsupportsInvalidatingCoreAnimationBool = 2004$/;"	e	enum:__anon14
+NPNVsupportsOpenGLBool	npapi.h	/^  , NPNVsupportsOpenGLBool = 2002$/;"	e	enum:__anon14
+NPNVsupportsQuickDrawBool	npapi.h	/^  , NPNVsupportsQuickDrawBool = 2000$/;"	e	enum:__anon14
+NPNVsupportsUpdatedCocoaTextInputBool	npapi.h	/^  , NPNVsupportsUpdatedCocoaTextInputBool = 3002 \/* TRUE if the browser supports the updated$/;"	e	enum:__anon14
+NPNVxDisplay	npapi.h	/^  NPNVxDisplay = 1,$/;"	e	enum:__anon14
+NPNVxtAppContext	npapi.h	/^  NPNVxtAppContext,$/;"	e	enum:__anon14
+NPN_Construct	player.c	/^bool NPN_Construct(NPP npp, NPObject* obj, const NPVariant *args, uint32_t argCount, NPVariant *result){$/;"	f
+NPN_ConstructProcPtr	npfunctions.h	/^typedef bool         (*NPN_ConstructProcPtr)(NPP npp, NPObject* obj, const NPVariant *args, uint32_t argCount, NPVariant *result);$/;"	t
+NPN_ConvertPoint	player.c	/^NPBool NPN_ConvertPoint(NPP instance, double sourceX, double sourceY, NPCoordinateSpace sourceSpace, double *destX, double *destY, NPCoordinateSpace destSpace){$/;"	f
+NPN_ConvertPointPtr	npfunctions.h	/^typedef NPBool       (*NPN_ConvertPointPtr)(NPP instance, double sourceX, double sourceY, NPCoordinateSpace sourceSpace, double *destX, double *destY, NPCoordinateSpace destSpace);$/;"	t
+NPN_CreateObjectProc	player.c	/^NPObject* NPN_CreateObjectProc(NPP npp, NPClass *aClass) {$/;"	f
+NPN_CreateObjectProcPtr	npfunctions.h	/^typedef NPObject*    (*NPN_CreateObjectProcPtr)(NPP npp, NPClass *aClass);$/;"	t
+NPN_DestroyStreamProcPtr	npfunctions.h	/^typedef NPError      (*NPN_DestroyStreamProcPtr)(NPP instance, NPStream* stream, NPReason reason);$/;"	t
+NPN_Enumerate	player.c	/^bool NPN_Enumerate(NPP npp, NPObject *obj, NPIdentifier **identifier, uint32_t *count){$/;"	f
+NPN_EnumerateProcPtr	npfunctions.h	/^typedef bool         (*NPN_EnumerateProcPtr)(NPP npp, NPObject *obj, NPIdentifier **identifier, uint32_t *count);$/;"	t
+NPN_EvaluateProcPtr	npfunctions.h	/^typedef bool         (*NPN_EvaluateProcPtr)(NPP npp, NPObject *obj, NPString *script, NPVariant *result);$/;"	t
+NPN_FUNC_H	npn_funcs.h	2;"	d
+NPN_FinalizeAsyncSurface	player.c	/^NPError NPN_FinalizeAsyncSurface(NPP instance, NPAsyncSurface *surface){$/;"	f
+NPN_FinalizeAsyncSurfacePtr	npfunctions.h	/^typedef NPError      (*NPN_FinalizeAsyncSurfacePtr)(NPP instance, NPAsyncSurface *surface);$/;"	t
+NPN_ForceRedrawProcPtr	npfunctions.h	/^typedef void         (*NPN_ForceRedrawProcPtr)(NPP instance);$/;"	t
+NPN_GetAuthenticationInfo	player.c	/^NPError NPN_GetAuthenticationInfo(NPP npp, const char *protocol, const char *host, int32_t port, const char *scheme, const char *realm, char **username, uint32_t *ulen, char **password, uint32_t *plen){$/;"	f
+NPN_GetAuthenticationInfoPtr	npfunctions.h	/^typedef NPError      (*NPN_GetAuthenticationInfoPtr)(NPP npp, const char *protocol, const char *host, int32_t port, const char *scheme, const char *realm, char **username, uint32_t *ulen, char **password, uint32_t *plen);$/;"	t
+NPN_GetIntIdentifierProcPtr	npfunctions.h	/^typedef NPIdentifier (*NPN_GetIntIdentifierProcPtr)(int32_t intid);$/;"	t
+NPN_GetJavaEnvProcPtr	npfunctions.h	/^typedef void*        (*NPN_GetJavaEnvProcPtr)(void);$/;"	t
+NPN_GetJavaPeerProcPtr	npfunctions.h	/^typedef void*        (*NPN_GetJavaPeerProcPtr)(NPP instance);$/;"	t
+NPN_GetPropertyProc	player.c	/^static bool NPN_GetPropertyProc( NPP npp, NPObject *npobj, NPIdentifier npid, NPVariant *result ) {$/;"	f	file:
+NPN_GetPropertyProcPtr	npfunctions.h	/^typedef bool         (*NPN_GetPropertyProcPtr)(NPP npp, NPObject *obj, NPIdentifier propertyName, NPVariant *result);$/;"	t
+NPN_GetStringIdentifierProc	player.c	/^NPIdentifier NPN_GetStringIdentifierProc(const NPUTF8* name) {$/;"	f
+NPN_GetStringIdentifierProcPtr	npfunctions.h	/^typedef NPIdentifier (*NPN_GetStringIdentifierProcPtr)(const NPUTF8* name);$/;"	t
+NPN_GetStringIdentifiersProcPtr	npfunctions.h	/^typedef void         (*NPN_GetStringIdentifiersProcPtr)(const NPUTF8** names, int32_t nameCount, NPIdentifier* identifiers);$/;"	t
+NPN_GetURL	player.c	/^NPError NPN_GetURL( NPP instance, const char* url, const char* target ) {$/;"	f
+NPN_GetURLNotifyProc	player.c	/^NPError NPN_GetURLNotifyProc(NPP instance, const char* url, const char* window, void* notifyData) {$/;"	f
+NPN_GetURLNotifyProcPtr	npfunctions.h	/^typedef NPError      (*NPN_GetURLNotifyProcPtr)(NPP instance, const char* url, const char* window, void* notifyData);$/;"	t
+NPN_GetURLProcPtr	npfunctions.h	/^typedef NPError      (*NPN_GetURLProcPtr)(NPP instance, const char* url, const char* window);$/;"	t
+NPN_GetValueForURL	player.c	/^NPError NPN_GetValueForURL(NPP npp, NPNURLVariable variable, const char *url, char **value, uint32_t *len){$/;"	f
+NPN_GetValueForURLPtr	npfunctions.h	/^typedef NPError      (*NPN_GetValueForURLPtr)(NPP npp, NPNURLVariable variable, const char *url, char **value, uint32_t *len);$/;"	t
+NPN_GetValueProc	player.c	/^NPError NPN_GetValueProc(NPP instance, NPNVariable variable, void *ret_value) {$/;"	f
+NPN_GetValueProcPtr	npfunctions.h	/^typedef NPError      (*NPN_GetValueProcPtr)(NPP instance, NPNVariable variable, void *ret_value);$/;"	t
+NPN_HandleEvent	player.c	/^NPBool NPN_HandleEvent(NPP instance, void *event, NPBool handled){$/;"	f
+NPN_HandleEventPtr	npfunctions.h	/^typedef NPBool       (*NPN_HandleEventPtr)(NPP instance, void *event, NPBool handled);$/;"	t
+NPN_HasMethodProc	player.c	/^static bool NPN_HasMethodProc( NPP npp, NPObject *npobj, NPIdentifier methodName ) {$/;"	f	file:
+NPN_HasMethodProcPtr	npfunctions.h	/^typedef bool         (*NPN_HasMethodProcPtr)(NPP npp, NPObject *obj, NPIdentifier propertyName);$/;"	t
+NPN_HasPropertyProc	player.c	/^static bool NPN_HasPropertyProc( NPP npp, NPObject *npobj, NPIdentifier propertyName ) {$/;"	f	file:
+NPN_HasPropertyProcPtr	npfunctions.h	/^typedef bool         (*NPN_HasPropertyProcPtr)(NPP npp, NPObject *obj, NPIdentifier propertyName);$/;"	t
+NPN_IdentifierIsStringProcPtr	npfunctions.h	/^typedef bool         (*NPN_IdentifierIsStringProcPtr)(NPIdentifier identifier);$/;"	t
+NPN_InitAsyncSurface	player.c	/^NPError NPN_InitAsyncSurface(NPP instance, NPSize *size, NPImageFormat format, void *initData, NPAsyncSurface *surface){$/;"	f
+NPN_InitAsyncSurfacePtr	npfunctions.h	/^typedef NPError      (*NPN_InitAsyncSurfacePtr)(NPP instance, NPSize *size, NPImageFormat format, void *initData, NPAsyncSurface *surface);$/;"	t
+NPN_IntFromIdentifierProcPtr	npfunctions.h	/^typedef int32_t      (*NPN_IntFromIdentifierProcPtr)(NPIdentifier identifier);$/;"	t
+NPN_InvalidateRectProcPtr	npfunctions.h	/^typedef void         (*NPN_InvalidateRectProcPtr)(NPP instance, NPRect *rect);$/;"	t
+NPN_InvalidateRegionProcPtr	npfunctions.h	/^typedef void         (*NPN_InvalidateRegionProcPtr)(NPP instance, NPRegion region);$/;"	t
+NPN_InvokeDefaultProc	player.c	/^static bool NPN_InvokeDefaultProc( NPP npp, NPObject *npobj, const NPVariant *args, uint32_t argCount, NPVariant *result ) {$/;"	f	file:
+NPN_InvokeDefaultProcPtr	npfunctions.h	/^typedef bool         (*NPN_InvokeDefaultProcPtr)(NPP npp, NPObject* obj, const NPVariant *args, uint32_t argCount, NPVariant *result);$/;"	t
+NPN_InvokeProc	player.c	/^bool NPN_InvokeProc( NPP npp, NPObject *npobj, NPIdentifier npid, const NPVariant *args, uint32_t argCount, NPVariant *result ) {$/;"	f
+NPN_InvokeProcPtr	npfunctions.h	/^typedef bool         (*NPN_InvokeProcPtr)(NPP npp, NPObject* obj, NPIdentifier methodName, const NPVariant *args, uint32_t argCount, NPVariant *result);$/;"	t
+NPN_MemAllocProcPtr	npfunctions.h	/^typedef void*        (*NPN_MemAllocProcPtr)(uint32_t size);$/;"	t
+NPN_MemFlushProcPtr	npfunctions.h	/^typedef uint32_t     (*NPN_MemFlushProcPtr)(uint32_t size);$/;"	t
+NPN_MemFreeProcPtr	npfunctions.h	/^typedef void         (*NPN_MemFreeProcPtr)(void* ptr);$/;"	t
+NPN_NewStreamProcPtr	npfunctions.h	/^typedef NPError      (*NPN_NewStreamProcPtr)(NPP instance, NPMIMEType type, const char* window, NPStream** stream);$/;"	t
+NPN_PluginThreadAsyncCall	player.c	/^void NPN_PluginThreadAsyncCall(NPP instance, void (*func)(void *), void *userData){$/;"	f
+NPN_PluginThreadAsyncCallProcPtr	npfunctions.h	/^typedef void         (*NPN_PluginThreadAsyncCallProcPtr)(NPP instance, void (*func)(void *), void *userData);$/;"	t
+NPN_PopPopupsEnabledState	player.c	/^void NPN_PopPopupsEnabledState(NPP npp){$/;"	f
+NPN_PopPopupsEnabledStateProcPtr	npfunctions.h	/^typedef void         (*NPN_PopPopupsEnabledStateProcPtr)(NPP npp);$/;"	t
+NPN_PopUpContextMenu	player.c	/^NPError NPN_PopUpContextMenu(NPP instance, NPMenu* menu){$/;"	f
+NPN_PopUpContextMenuPtr	npfunctions.h	/^typedef NPError      (*NPN_PopUpContextMenuPtr)(NPP instance, NPMenu* menu);$/;"	t
+NPN_PostURL	player.c	/^NPError NPN_PostURL( NPP instance, const char* url, const char* target, uint32_t len, const char* buf, NPBool file ) {$/;"	f
+NPN_PostURLNotify	player.c	/^NPError NPN_PostURLNotify( NPP instance, const char* url, const char* target, uint32_t len, const char* buf, NPBool file, void* notifyData) {$/;"	f
+NPN_PostURLNotifyProcPtr	npfunctions.h	/^typedef NPError      (*NPN_PostURLNotifyProcPtr)(NPP instance, const char* url, const char* window, uint32_t len, const char* buf, NPBool file, void* notifyData);$/;"	t
+NPN_PostURLProcPtr	npfunctions.h	/^typedef NPError      (*NPN_PostURLProcPtr)(NPP instance, const char* url, const char* window, uint32_t len, const char* buf, NPBool file);$/;"	t
+NPN_PushPopupsEnabledState	player.c	/^void NPN_PushPopupsEnabledState(NPP npp, NPBool enabled){$/;"	f
+NPN_PushPopupsEnabledStateProcPtr	npfunctions.h	/^typedef void         (*NPN_PushPopupsEnabledStateProcPtr)(NPP npp, NPBool enabled);$/;"	t
+NPN_ReleaseObjectProc	player.c	/^void NPN_ReleaseObjectProc(NPObject *npobj) {$/;"	f
+NPN_ReleaseObjectProcPtr	npfunctions.h	/^typedef void         (*NPN_ReleaseObjectProcPtr)(NPObject *obj);$/;"	t
+NPN_ReleaseVariantValueProc	player.c	/^void NPN_ReleaseVariantValueProc(NPVariant *variant) {$/;"	f
+NPN_ReleaseVariantValueProcPtr	npfunctions.h	/^typedef void         (*NPN_ReleaseVariantValueProcPtr)(NPVariant *variant);$/;"	t
+NPN_ReloadPluginsProcPtr	npfunctions.h	/^typedef void         (*NPN_ReloadPluginsProcPtr)(NPBool reloadPages);$/;"	t
+NPN_RemovePropertyProc	player.c	/^static bool NPN_RemovePropertyProc( NPP npp, NPObject *npobj, NPIdentifier propertyName ) {$/;"	f	file:
+NPN_RemovePropertyProcPtr	npfunctions.h	/^typedef bool         (*NPN_RemovePropertyProcPtr)(NPP npp, NPObject *obj, NPIdentifier propertyName);$/;"	t
+NPN_RequestRead	player.c	/^NPError NPN_RequestRead(NPStream* stream, NPByteRange* range_list) {$/;"	f
+NPN_RequestReadProcPtr	npfunctions.h	/^typedef NPError      (*NPN_RequestReadProcPtr)(NPStream* stream, NPByteRange* rangeList);$/;"	t
+NPN_RetainObjectProc	player.c	/^NPObject* NPN_RetainObjectProc(NPObject *npobj) {$/;"	f
+NPN_RetainObjectProcPtr	npfunctions.h	/^typedef NPObject*    (*NPN_RetainObjectProcPtr)(NPObject *obj);$/;"	t
+NPN_ScheduleTimer	player.c	/^uint32_t NPN_ScheduleTimer(NPP instance, uint32_t interval, NPBool repeat, void (*timerFunc)(NPP npp, uint32_t timerID)){$/;"	f
+NPN_ScheduleTimerPtr	npfunctions.h	/^typedef uint32_t     (*NPN_ScheduleTimerPtr)(NPP instance, uint32_t interval, NPBool repeat, void (*timerFunc)(NPP npp, uint32_t timerID));$/;"	t
+NPN_SetCurrentAsyncSurface	player.c	/^void NPN_SetCurrentAsyncSurface(NPP instance, NPAsyncSurface *surface, NPRect *changed){$/;"	f
+NPN_SetCurrentAsyncSurfacePtr	npfunctions.h	/^typedef void         (*NPN_SetCurrentAsyncSurfacePtr)(NPP instance, NPAsyncSurface *surface, NPRect *changed);$/;"	t
+NPN_SetExceptionProcPtr	npfunctions.h	/^typedef void         (*NPN_SetExceptionProcPtr)(NPObject *obj, const NPUTF8 *message);$/;"	t
+NPN_SetPropertyProc	player.c	/^static bool NPN_SetPropertyProc( NPP npp, NPObject *npobj, NPIdentifier propertyName, const NPVariant *value ) {$/;"	f	file:
+NPN_SetPropertyProcPtr	npfunctions.h	/^typedef bool         (*NPN_SetPropertyProcPtr)(NPP npp, NPObject *obj, NPIdentifier propertyName, const NPVariant *value);$/;"	t
+NPN_SetValueForURL	player.c	/^NPError NPN_SetValueForURL(NPP npp, NPNURLVariable variable, const char *url, const char *value, uint32_t len){$/;"	f
+NPN_SetValueForURLPtr	npfunctions.h	/^typedef NPError      (*NPN_SetValueForURLPtr)(NPP npp, NPNURLVariable variable, const char *url, const char *value, uint32_t len);$/;"	t
+NPN_SetValueProc	player.c	/^NPError NPN_SetValueProc(NPP instance, NPPVariable variable, void *value)$/;"	f
+NPN_SetValueProcPtr	npfunctions.h	/^typedef NPError      (*NPN_SetValueProcPtr)(NPP instance, NPPVariable variable, void *value);$/;"	t
+NPN_StatusProcPtr	npfunctions.h	/^typedef void         (*NPN_StatusProcPtr)(NPP instance, const char* message);$/;"	t
+NPN_URLRedirectResponse	player.c	/^void NPN_URLRedirectResponse(NPP instance, void* notifyData, NPBool allow){$/;"	f
+NPN_URLRedirectResponsePtr	npfunctions.h	/^typedef void         (*NPN_URLRedirectResponsePtr)(NPP instance, void* notifyData, NPBool allow);$/;"	t
+NPN_UTF8FromIdentifierProcPtr	npfunctions.h	/^typedef NPUTF8*      (*NPN_UTF8FromIdentifierProcPtr)(NPIdentifier identifier);$/;"	t
+NPN_UnfocusInstance	player.c	/^NPBool NPN_UnfocusInstance(NPP instance, NPFocusDirection direction){$/;"	f
+NPN_UnfocusInstancePtr	npfunctions.h	/^typedef NPBool       (*NPN_UnfocusInstancePtr)(NPP instance, NPFocusDirection direction);$/;"	t
+NPN_UnscheduleTimer	player.c	/^void NPN_UnscheduleTimer(NPP instance, uint32_t timerID){$/;"	f
+NPN_UnscheduleTimerPtr	npfunctions.h	/^typedef void         (*NPN_UnscheduleTimerPtr)(NPP instance, uint32_t timerID);$/;"	t
+NPN_UserAgentProc	player.c	/^const char* NPN_UserAgentProc(NPP instance) {$/;"	f
+NPN_UserAgentProcPtr	npfunctions.h	/^typedef const char*  (*NPN_UserAgentProcPtr)(NPP instance);$/;"	t
+NPN_WriteProcPtr	npfunctions.h	/^typedef int32_t      (*NPN_WriteProcPtr)(NPP instance, NPStream* stream, int32_t len, void* buffer);$/;"	t
+NPNetscapeFuncs	npfunctions.h	/^} NPNetscapeFuncs;$/;"	t	typeref:struct:_NPNetscapeFuncs
+NPObject	npruntime.h	/^struct NPObject {$/;"	s
+NPObject	npruntime.h	/^typedef struct NPObject NPObject;$/;"	t	typeref:struct:NPObject
+NPP	npapi.h	/^typedef NPP_t*  NPP;$/;"	t
+NPPVariable	npapi.h	/^} NPPVariable;$/;"	t	typeref:enum:__anon13
+NPPVformValue	npapi.h	/^  NPPVformValue = 16,$/;"	e	enum:__anon13
+NPPVjavaClass	npapi.h	/^  NPPVjavaClass,$/;"	e	enum:__anon13
+NPPVjavascriptPushCallerBool	npapi.h	/^  NPPVjavascriptPushCallerBool = 12,$/;"	e	enum:__anon13
+NPPVpluginCancelSrcStream	npapi.h	/^  NPPVpluginCancelSrcStream = 20,$/;"	e	enum:__anon13
+NPPVpluginCoreAnimationLayer	npapi.h	/^  , NPPVpluginCoreAnimationLayer = 1003$/;"	e	enum:__anon13
+NPPVpluginDescriptionString	npapi.h	/^  NPPVpluginDescriptionString,$/;"	e	enum:__anon13
+NPPVpluginDrawingModel	npapi.h	/^  NPPVpluginDrawingModel = 1000$/;"	e	enum:__anon13
+NPPVpluginEventModel	npapi.h	/^  , NPPVpluginEventModel = 1001$/;"	e	enum:__anon13
+NPPVpluginKeepLibraryInMemory	npapi.h	/^  NPPVpluginKeepLibraryInMemory = 13,$/;"	e	enum:__anon13
+NPPVpluginNameString	npapi.h	/^  NPPVpluginNameString = 1,$/;"	e	enum:__anon13
+NPPVpluginNativeAccessibleAtkPlugId	npapi.h	/^  NPPVpluginNativeAccessibleAtkPlugId = 19,$/;"	e	enum:__anon13
+NPPVpluginNeedsXEmbed	npapi.h	/^  NPPVpluginNeedsXEmbed         = 14,$/;"	e	enum:__anon13
+NPPVpluginScriptableIID	npapi.h	/^  NPPVpluginScriptableIID = 11,$/;"	e	enum:__anon13
+NPPVpluginScriptableInstance	npapi.h	/^  NPPVpluginScriptableInstance = (10 | NP_ABI_MASK),$/;"	e	enum:__anon13
+NPPVpluginScriptableNPObject	npapi.h	/^  NPPVpluginScriptableNPObject  = 15,$/;"	e	enum:__anon13
+NPPVpluginTimerInterval	npapi.h	/^  NPPVpluginTimerInterval,$/;"	e	enum:__anon13
+NPPVpluginTransparentBool	npapi.h	/^  NPPVpluginTransparentBool,$/;"	e	enum:__anon13
+NPPVpluginUrlRequestsDisplayedBool	npapi.h	/^  NPPVpluginUrlRequestsDisplayedBool = 17,$/;"	e	enum:__anon13
+NPPVpluginUsesDOMForCursorBool	npapi.h	/^  NPPVpluginUsesDOMForCursorBool = 22,$/;"	e	enum:__anon13
+NPPVpluginWantsAllNetworkStreams	npapi.h	/^  NPPVpluginWantsAllNetworkStreams = 18,$/;"	e	enum:__anon13
+NPPVpluginWindowBool	npapi.h	/^  NPPVpluginWindowBool,$/;"	e	enum:__anon13
+NPPVpluginWindowSize	npapi.h	/^  NPPVpluginWindowSize,$/;"	e	enum:__anon13
+NPPVpluginWindowlessLocalBool	npapi.h	/^  , NPPVpluginWindowlessLocalBool = 2002$/;"	e	enum:__anon13
+NPPVsupportsAdvancedKeyHandling	npapi.h	/^  NPPVsupportsAdvancedKeyHandling = 21,$/;"	e	enum:__anon13
+NPP_ClearSiteDataPtr	npfunctions.h	/^typedef NPError      (* NP_LOADDS NPP_ClearSiteDataPtr)(const char* site, uint64_t flags, uint64_t maxAge);$/;"	t
+NPP_DestroyProcPtr	npfunctions.h	/^typedef NPError      (* NP_LOADDS NPP_DestroyProcPtr)(NPP instance, NPSavedData** save);$/;"	t
+NPP_DestroyStreamProcPtr	npfunctions.h	/^typedef NPError      (* NP_LOADDS NPP_DestroyStreamProcPtr)(NPP instance, NPStream* stream, NPReason reason);$/;"	t
+NPP_DidCompositePtr	npfunctions.h	/^typedef void         (* NP_LOADDS NPP_DidCompositePtr)(NPP instance);$/;"	t
+NPP_FUNCS_H	npp_funcs.h	2;"	d
+NPP_GetSitesWithDataPtr	npfunctions.h	/^typedef char**       (* NP_LOADDS NPP_GetSitesWithDataPtr)(void);$/;"	t
+NPP_GetValueProcPtr	npfunctions.h	/^typedef NPError      (* NP_LOADDS NPP_GetValueProcPtr)(NPP instance, NPPVariable variable, void *ret_value);$/;"	t
+NPP_GotFocusPtr	npfunctions.h	/^typedef NPBool       (* NP_LOADDS NPP_GotFocusPtr)(NPP instance, NPFocusDirection direction);$/;"	t
+NPP_HandleEventProcPtr	npfunctions.h	/^typedef int16_t      (* NP_LOADDS NPP_HandleEventProcPtr)(NPP instance, void* event);$/;"	t
+NPP_LostFocusPtr	npfunctions.h	/^typedef void         (* NP_LOADDS NPP_LostFocusPtr)(NPP instance);$/;"	t
+NPP_NewProcPtr	npfunctions.h	/^typedef NPError      (* NP_LOADDS NPP_NewProcPtr)(NPMIMEType pluginType, NPP instance, uint16_t mode, int16_t argc, char* argn[], char* argv[], NPSavedData* saved);$/;"	t
+NPP_NewStreamProcPtr	npfunctions.h	/^typedef NPError      (* NP_LOADDS NPP_NewStreamProcPtr)(NPP instance, NPMIMEType type, NPStream* stream, NPBool seekable, uint16_t* stype);$/;"	t
+NPP_PrintProcPtr	npfunctions.h	/^typedef void         (* NP_LOADDS NPP_PrintProcPtr)(NPP instance, NPPrint* platformPrint);$/;"	t
+NPP_SetValueProcPtr	npfunctions.h	/^typedef NPError      (* NP_LOADDS NPP_SetValueProcPtr)(NPP instance, NPNVariable variable, void *value);$/;"	t
+NPP_SetWindowProcPtr	npfunctions.h	/^typedef NPError      (* NP_LOADDS NPP_SetWindowProcPtr)(NPP instance, NPWindow* window);$/;"	t
+NPP_StreamAsFileProcPtr	npfunctions.h	/^typedef void         (* NP_LOADDS NPP_StreamAsFileProcPtr)(NPP instance, NPStream* stream, const char* fname);$/;"	t
+NPP_URLNotifyProcPtr	npfunctions.h	/^typedef void         (* NP_LOADDS NPP_URLNotifyProcPtr)(NPP instance, const char* url, NPReason reason, void* notifyData);$/;"	t
+NPP_URLRedirectNotifyPtr	npfunctions.h	/^typedef void         (* NP_LOADDS NPP_URLRedirectNotifyPtr)(NPP instance, const char* url, int32_t status, void* notifyData);$/;"	t
+NPP_WriteProcPtr	npfunctions.h	/^typedef int32_t      (* NP_LOADDS NPP_WriteProcPtr)(NPP instance, NPStream* stream, int32_t offset, int32_t len, void* buffer);$/;"	t
+NPP_WriteReadyProcPtr	npfunctions.h	/^typedef int32_t      (* NP_LOADDS NPP_WriteReadyProcPtr)(NPP instance, NPStream* stream);$/;"	t
+NPP_t	npapi.h	/^} NPP_t;$/;"	t	typeref:struct:_NPP
+NPPluginData	npfunctions.h	/^} NPPluginData;$/;"	t	typeref:struct:_NPPluginData
+NPPluginFuncs	npfunctions.h	/^} NPPluginFuncs;$/;"	t	typeref:struct:_NPPluginFuncs
+NPPrint	npapi.h	/^} NPPrint;$/;"	t	typeref:struct:_NPPrint
+NPPrintCallbackStruct	npapi.h	/^} NPPrintCallbackStruct;$/;"	t	typeref:struct:__anon10
+NPQDRegion	npapi.h	/^typedef RgnHandle NPQDRegion;$/;"	t
+NPRES_BASE	npapi.h	787;"	d
+NPRES_DONE	npapi.h	788;"	d
+NPRES_NETWORK_ERR	npapi.h	789;"	d
+NPRES_USER_BREAK	npapi.h	790;"	d
+NPReason	npapi.h	/^typedef int16_t       NPReason;$/;"	t
+NPRect	npapi.h	/^} NPRect;$/;"	t	typeref:struct:_NPRect
+NPRegion	npapi.h	/^typedef HRGN NPRegion;$/;"	t
+NPRegion	npapi.h	/^typedef QRegion* NPRegion;$/;"	t
+NPRegion	npapi.h	/^typedef Region NPRegion;$/;"	t
+NPRegion	npapi.h	/^typedef void *NPRegion;$/;"	t
+NPRegion	npapi.h	/^typedef void* NPRegion;$/;"	t
+NPRemovePropertyFunctionPtr	npruntime.h	/^typedef bool (*NPRemovePropertyFunctionPtr)(NPObject *npobj,$/;"	t
+NPSavedData	npapi.h	/^} NPSavedData;$/;"	t	typeref:struct:_NPSavedData
+NPSetPropertyFunctionPtr	npruntime.h	/^typedef bool (*NPSetPropertyFunctionPtr)(NPObject *npobj, NPIdentifier name,$/;"	t
+NPSetWindowCallbackStruct	npapi.h	/^} NPSetWindowCallbackStruct;$/;"	t	typeref:struct:__anon9
+NPSize	npapi.h	/^} NPSize;$/;"	t	typeref:struct:_NPSize
+NPStream	npapi.h	/^} NPStream;$/;"	t	typeref:struct:_NPStream
+NPString	npruntime.h	/^} NPString;$/;"	t	typeref:struct:_NPString
+NPUTF8	npruntime.h	/^typedef char NPUTF8;$/;"	t
+NPVARIANT_IS_BOOLEAN	npruntime.h	125;"	d
+NPVARIANT_IS_DOUBLE	npruntime.h	127;"	d
+NPVARIANT_IS_INT32	npruntime.h	126;"	d
+NPVARIANT_IS_NULL	npruntime.h	124;"	d
+NPVARIANT_IS_OBJECT	npruntime.h	129;"	d
+NPVARIANT_IS_STRING	npruntime.h	128;"	d
+NPVARIANT_IS_VOID	npruntime.h	123;"	d
+NPVARIANT_TO_BOOLEAN	npruntime.h	131;"	d
+NPVARIANT_TO_DOUBLE	npruntime.h	133;"	d
+NPVARIANT_TO_INT32	npruntime.h	132;"	d
+NPVARIANT_TO_OBJECT	npruntime.h	135;"	d
+NPVARIANT_TO_STRING	npruntime.h	134;"	d
+NPVERS_68K_HAS_LIVECONNECT	npapi.h	805;"	d
+NPVERS_HAS_ADVANCED_KEY_HANDLING	npapi.h	818;"	d
+NPVERS_HAS_ALL_NETWORK_STREAMS	npapi.h	814;"	d
+NPVERS_HAS_CLEAR_SITE_DATA	npapi.h	820;"	d
+NPVERS_HAS_FORM_VALUES	npapi.h	809;"	d
+NPVERS_HAS_LIVECONNECT	npapi.h	804;"	d
+NPVERS_HAS_NOTIFICATION	npapi.h	803;"	d
+NPVERS_HAS_NPOBJECT_ENUM	npapi.h	812;"	d
+NPVERS_HAS_NPRUNTIME_SCRIPTING	npapi.h	808;"	d
+NPVERS_HAS_PLUGIN_THREAD_ASYNC_CALL	npapi.h	813;"	d
+NPVERS_HAS_POPUPS_ENABLED_STATE	npapi.h	810;"	d
+NPVERS_HAS_PRIVATE_MODE	npapi.h	816;"	d
+NPVERS_HAS_RESPONSE_HEADERS	npapi.h	811;"	d
+NPVERS_HAS_STREAMOUTPUT	npapi.h	802;"	d
+NPVERS_HAS_URL_AND_AUTH_INFO	npapi.h	815;"	d
+NPVERS_HAS_URL_REDIRECT_HANDLING	npapi.h	819;"	d
+NPVERS_HAS_WINDOWLESS	npapi.h	806;"	d
+NPVERS_HAS_XPCONNECT_SCRIPTING	npapi.h	807;"	d
+NPVERS_MACOSX_HAS_COCOA_EVENTS	npapi.h	817;"	d
+NPVariant	npruntime.h	/^} NPVariant;$/;"	t	typeref:struct:_NPVariant
+NPVariantType	npruntime.h	/^} NPVariantType;$/;"	t	typeref:enum:__anon28
+NPVariantType_Bool	npruntime.h	/^    NPVariantType_Bool,$/;"	e	enum:__anon28
+NPVariantType_Double	npruntime.h	/^    NPVariantType_Double,$/;"	e	enum:__anon28
+NPVariantType_Int32	npruntime.h	/^    NPVariantType_Int32,$/;"	e	enum:__anon28
+NPVariantType_Null	npruntime.h	/^    NPVariantType_Null,$/;"	e	enum:__anon28
+NPVariantType_Object	npruntime.h	/^    NPVariantType_Object$/;"	e	enum:__anon28
+NPVariantType_String	npruntime.h	/^    NPVariantType_String,$/;"	e	enum:__anon28
+NPVariantType_Void	npruntime.h	/^    NPVariantType_Void,$/;"	e	enum:__anon28
+NPWindow	npapi.h	/^} NPWindow;$/;"	t	typeref:struct:_NPWindow
+NPWindowType	npapi.h	/^} NPWindowType;$/;"	t	typeref:enum:__anon17
+NPWindowTypeDrawable	npapi.h	/^  NPWindowTypeDrawable$/;"	e	enum:__anon17
+NPWindowTypeWindow	npapi.h	/^  NPWindowTypeWindow = 1,$/;"	e	enum:__anon17
+NP_ABI_GCC3_MASK	npapi.h	347;"	d
+NP_ABI_MACHO_MASK	npapi.h	359;"	d
+NP_ABI_MASK	npapi.h	365;"	d
+NP_ASFILE	npapi.h	742;"	d
+NP_ASFILEONLY	npapi.h	743;"	d
+NP_BEGIN_MACRO	npruntime.h	73;"	d
+NP_CGContext	npapi.h	/^typedef struct NP_CGContext$/;"	s
+NP_CGContext	npapi.h	/^} NP_CGContext;$/;"	t	typeref:struct:NP_CGContext
+NP_CLASS_STRUCT_VERSION	npruntime.h	312;"	d
+NP_CLASS_STRUCT_VERSION_CTOR	npruntime.h	315;"	d
+NP_CLASS_STRUCT_VERSION_ENUM	npruntime.h	314;"	d
+NP_CLASS_STRUCT_VERSION_HAS_CTOR	npruntime.h	320;"	d
+NP_CLASS_STRUCT_VERSION_HAS_ENUM	npruntime.h	317;"	d
+NP_CLEAR_ALL	npapi.h	750;"	d
+NP_CLEAR_CACHE	npapi.h	751;"	d
+NP_EABORT	npapi.h	797;"	d
+NP_EINVAL	npapi.h	796;"	d
+NP_EMBED	npapi.h	734;"	d
+NP_END_MACRO	npruntime.h	74;"	d
+NP_EXPORT	npfunctions.h	266;"	d
+NP_FULL	npapi.h	735;"	d
+NP_GETMIMEDESCRIPTION_NAME	npfunctions.h	242;"	d
+NP_GLContext	npapi.h	/^typedef struct NP_GLContext$/;"	s
+NP_GLContext	npapi.h	/^} NP_GLContext;$/;"	t	typeref:struct:NP_GLContext
+NP_GetEntryPointsFunc	npfunctions.h	/^typedef NPError        (*NP_GetEntryPointsFunc)(NPPluginFuncs*);$/;"	t
+NP_GetEntryPointsFunc	npfunctions.h	/^typedef NPError     (OSCALL *NP_GetEntryPointsFunc)(NPPluginFuncs*);$/;"	t
+NP_GetMIMEDescriptionFunc	npfunctions.h	/^typedef const char*    (*NP_GetMIMEDescriptionFunc)(void);$/;"	t
+NP_GetMIMEDescriptionFunc	npfunctions.h	/^typedef const char* (*NP_GetMIMEDescriptionFunc)(void);$/;"	t
+NP_GetMIMEDescriptionProcPtr	npfunctions.h	/^typedef const char* (*NP_GetMIMEDescriptionProcPtr)(void);$/;"	t
+NP_GetPluginDataFunc	npfunctions.h	/^typedef NPError     (OSCALL *NP_GetPluginDataFunc)(NPPluginData*);$/;"	t
+NP_GetPluginVersionFunc	npfunctions.h	/^typedef char*          (*NP_GetPluginVersionFunc)(void);$/;"	t
+NP_GetValueFunc	npfunctions.h	/^typedef NPError        (*NP_GetValueFunc)(void *, NPPVariable, void *);$/;"	t
+NP_INFO_CompanyName	npapi.h	141;"	d
+NP_INFO_FileDescription	npapi.h	138;"	d
+NP_INFO_FileExtents	npapi.h	136;"	d
+NP_INFO_FileOpenName	npapi.h	135;"	d
+NP_INFO_FileVersion	npapi.h	142;"	d
+NP_INFO_InternalName	npapi.h	143;"	d
+NP_INFO_LegalCopyright	npapi.h	144;"	d
+NP_INFO_MIMEType	npapi.h	134;"	d
+NP_INFO_OriginalFilename	npapi.h	145;"	d
+NP_INFO_ProductName	npapi.h	139;"	d
+NP_INFO_ProductVersion	npapi.h	133;"	d
+NP_InitializeFunc	npfunctions.h	/^typedef NPError        (*NP_InitializeFunc)(NPNetscapeFuncs*);$/;"	t
+NP_InitializeFunc	npfunctions.h	/^typedef NPError        (*NP_InitializeFunc)(NPNetscapeFuncs*, NPPluginFuncs*);$/;"	t
+NP_InitializeFunc	npfunctions.h	/^typedef NPError     (OSCALL *NP_InitializeFunc)(NPNetscapeFuncs*);$/;"	t
+NP_LOADDS	npapi.h	827;"	d
+NP_LOADDS	npapi.h	829;"	d
+NP_LOADDS	npfunctions.h	43;"	d
+NP_LOADDS	npfunctions.h	45;"	d
+NP_MAXREADY	npapi.h	745;"	d
+NP_NOERR	npapi.h	795;"	d
+NP_NORMAL	npapi.h	740;"	d
+NP_NO_CARBON	npapi.h	75;"	d
+NP_NO_QUICKDRAW	npapi.h	74;"	d
+NP_PRINT	npapi.h	/^  NP_PRINT$/;"	e	enum:__anon7
+NP_Port	npapi.h	/^typedef struct NP_Port$/;"	s
+NP_Port	npapi.h	/^} NP_Port;$/;"	t	typeref:struct:NP_Port
+NP_SEEK	npapi.h	741;"	d
+NP_SETWINDOW	npapi.h	/^  NP_SETWINDOW = 1,$/;"	e	enum:__anon7
+NP_ShutdownFunc	npfunctions.h	/^typedef NPError        (*NP_ShutdownFunc)(void);$/;"	t
+NP_ShutdownFunc	npfunctions.h	/^typedef NPError     (OSCALL *NP_ShutdownFunc)(void);$/;"	t
+NP_VERSION_MAJOR	npapi.h	103;"	d
+NP_VERSION_MINOR	npapi.h	104;"	d
+NP_VISIBILITY_DEFAULT	npfunctions.h	260;"	d
+NP_VISIBILITY_DEFAULT	npfunctions.h	262;"	d
+NP_VISIBILITY_DEFAULT	npfunctions.h	264;"	d
+NULL_TO_NPVARIANT	npruntime.h	143;"	d
+NewStream	player.c	/^NPError NewStream( NPP instance, NPMIMEType type, const char* target, NPStream** stream ) {$/;"	f
+OBJECT_TO_NPVARIANT	npruntime.h	181;"	d
+OSCALL	npfunctions.h	248;"	d
+OSCALL	npfunctions.h	251;"	d
+OSCALL	npfunctions.h	253;"	d
+POOL_H	pool.h	2;"	d
+PR_FALSE	player.c	22;"	d	file:
+PR_TRUE	player.c	21;"	d	file:
+ReloadPlugins	player.c	/^void ReloadPlugins( NPBool reloadPages ) {$/;"	f
+SPECIAL_IDENTIFIER	npn_funcs.c	6;"	d	file:
+SPECIAL_IDENTIFIER	player.c	30;"	d	file:
+SPECIAL_METHOD_NAME	npn_funcs.c	7;"	d	file:
+SPECIAL_METHOD_NAME	player.c	31;"	d	file:
+STRINGN_TO_NPVARIANT	npruntime.h	174;"	d
+STRINGZ_TO_NPVARIANT	npruntime.h	167;"	d
+SetException	player.c	/^void SetException( NPObject *npobj, const NPUTF8 *message ) {$/;"	f
+Status_	player.c	/^static void Status_( NPP instance, const char* message ) {$/;"	f	file:
+StrFromNPID	npn_funcs.c	/^static char *StrFromNPID(NPIdentifier id){$/;"	f	file:
+UTF8Characters	npruntime.h	/^    const NPUTF8 *UTF8Characters;$/;"	m	struct:_NPString
+UTF8FromIdentifier	player.c	/^NPUTF8* UTF8FromIdentifier( NPIdentifier identifier ) {$/;"	f
+UTF8Length	npruntime.h	/^    uint32_t UTF8Length;$/;"	m	struct:_NPString
+VOID_TO_NPVARIANT	npruntime.h	137;"	d
+WINDOW_XSIZE	player.c	26;"	d	file:
+WINDOW_YSIZE	player.c	27;"	d	file:
+Write	player.c	/^int32_t Write( NPP instance, NPStream* stream, int32_t len, void* buffer ) {$/;"	f
+XP_MACOSX	npapi.h	69;"	d
+XP_OS2	npapi.h	49;"	d
+XP_SYMBIAN	npapi.h	62;"	d
+XP_UNIX	player.c	11;"	d	file:
+XP_WIN	npapi.h	56;"	d
+XP_WIN	npapi.h	63;"	d
+_BPSupportedMIMETypes	npfunctions.h	/^typedef struct _BPSupportedMIMETypes$/;"	s
+_InvalidateRect	player.c	/^void _InvalidateRect( NPP instance, NPRect *invalidRect ) {$/;"	f
+_LINUX_LIST_H	list.h	18;"	d
+_NPAsyncSurface	npapi.h	/^typedef struct _NPAsyncSurface$/;"	s
+_NPByteRange	npapi.h	/^typedef struct _NPByteRange$/;"	s
+_NPCocoaEvent	npapi.h	/^typedef struct _NPCocoaEvent {$/;"	s
+_NPEmbedPrint	npapi.h	/^typedef struct _NPEmbedPrint$/;"	s
+_NPEvent	npapi.h	/^typedef struct _NPEvent$/;"	s
+_NPFullPrint	npapi.h	/^typedef struct _NPFullPrint$/;"	s
+_NPImageExpose	npapi.h	/^typedef struct _NPImageExpose$/;"	s
+_NPNetscapeFuncs	npfunctions.h	/^typedef struct _NPNetscapeFuncs {$/;"	s
+_NPP	npapi.h	/^typedef struct _NPP$/;"	s
+_NPPluginData	npfunctions.h	/^typedef struct _NPPluginData {   \/* Alternate OS2 Plugin interface *\/$/;"	s
+_NPPluginFuncs	npfunctions.h	/^typedef struct _NPPluginFuncs {$/;"	s
+_NPPrint	npapi.h	/^typedef struct _NPPrint$/;"	s
+_NPRect	npapi.h	/^typedef struct _NPRect$/;"	s
+_NPSavedData	npapi.h	/^typedef struct _NPSavedData$/;"	s
+_NPSize	npapi.h	/^typedef struct _NPSize$/;"	s
+_NPStream	npapi.h	/^typedef struct _NPStream$/;"	s
+_NPString	npruntime.h	/^typedef struct _NPString {$/;"	s
+_NPVariant	npruntime.h	/^typedef struct _NPVariant {$/;"	s
+_NPWindow	npapi.h	/^typedef struct _NPWindow$/;"	s
+_NP_ABI_MIXIN_FOR_GCC3	npapi.h	353;"	d
+_NP_ABI_MIXIN_FOR_GCC3	npapi.h	355;"	d
+_NP_ABI_MIXIN_FOR_MACHO	npapi.h	360;"	d
+_NP_ABI_MIXIN_FOR_MACHO	npapi.h	362;"	d
+_NP_RUNTIME_H_	npruntime.h	34;"	d
+__gen_class	npn_funcs.c	/^static NPClass __gen_class = {$/;"	v	file:
+__gen_class	player.c	/^static NPClass __gen_class =$/;"	v	file:
+__hlist_del	list.h	/^static inline void __hlist_del(struct hlist_node *n)$/;"	f
+__list_add	list.h	/^static inline void __list_add(struct list_head *new,$/;"	f
+__list_del	list.h	/^static inline void __list_del(struct list_head * prev, struct list_head * next)$/;"	f
+__list_for_each	list.h	260;"	d
+__list_splice	list.h	/^static inline void __list_splice(struct list_head *list,$/;"	f
+__location	npn_funcs.c	/^static NPObject __location = { &__gen_class, 1};$/;"	v	file:
+__location	player.c	/^static NPObject __location = { &__gen_class, 1};$/;"	v	file:
+__top	npn_funcs.c	/^static NPObject __top = { &__gen_class, 1 };$/;"	v	file:
+__top	player.c	/^static NPObject __top = { &__gen_class, 1 };$/;"	v	file:
+__top_location	npn_funcs.c	/^static NPObject __top_location = { &__gen_class, 1 };$/;"	v	file:
+__top_location	player.c	/^static NPObject __top_location = { &__gen_class, 1 };$/;"	v	file:
+__window	npn_funcs.c	/^static NPObject __window = { &__gen_class, 1 };$/;"	v	file:
+__window	player.c	/^static NPObject __window = { &__gen_class, 1 };$/;"	v	file:
+_class	npruntime.h	/^    NPClass *_class;$/;"	m	struct:NPObject
+addNPId	player.c	/^static NPIdentifier addNPId( const char *id ) {$/;"	f	file:
+alive	pool.h	/^	int alive;$/;"	m	struct:thread_pool
+allocate	npruntime.h	/^    NPAllocateFunctionPtr allocate;$/;"	m	struct:NPClass
+arg	pool.h	/^	void *arg;$/;"	m	struct:pool_work
+asfile	npfunctions.h	/^  NPP_StreamAsFileProcPtr asfile;$/;"	m	struct:_NPPluginFuncs
+bFuncs	npfunctions.h	/^NP_EXPORT(NPError)     NP_Initialize(NPNetscapeFuncs* bFuncs);$/;"	v
+bitmap	npapi.h	/^    } bitmap;$/;"	m	union:_NPAsyncSurface::__anon5	typeref:struct:_NPAsyncSurface::__anon5::__anon6
+body_data	curl_url.h	/^typedef struct body_data{$/;"	s
+body_data	curl_url.h	/^}body_data;$/;"	t	typeref:struct:body_data
+bool	nptypes.h	/^    typedef int bool;$/;"	t
+bool	nptypes.h	114;"	d
+boolValue	npruntime.h	/^        bool boolValue;$/;"	m	union:_NPVariant::__anon29
+bottom	npapi.h	/^  uint16_t bottom;$/;"	m	struct:_NPRect
+browserFuncs	npn_funcs.c	/^NPNetscapeFuncs browserFuncs = {$/;"	v
+browserFuncs	player.c	/^NPNetscapeFuncs browserFuncs;$/;"	v
+buf	curl_url.h	/^    char *buf;$/;"	m	struct:buf_data
+buf	npapi.h	/^  void*   buf;$/;"	m	struct:_NPSavedData
+buf_data	curl_url.h	/^typedef struct buf_data{$/;"	s
+buf_data	curl_url.h	/^}buf_data;$/;"	t	typeref:struct:buf_data
+buttonNumber	npapi.h	/^      int32_t  buttonNumber;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon22
+characters	npapi.h	/^      NPNSString *characters;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon23
+charactersIgnoringModifiers	npapi.h	/^      NPNSString *charactersIgnoringModifiers;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon23
+checkError	player.c	/^static void checkError(const char* str, NPError err) {$/;"	f	file:
+clearsitedata	npfunctions.h	/^  NPP_ClearSiteDataPtr clearsitedata;$/;"	m	struct:_NPPluginFuncs
+clickCount	npapi.h	/^      int32_t  clickCount;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon22
+clipRect	npapi.h	/^  NPRect   clipRect; \/* Clipping rectangle in port coordinates *\/$/;"	m	struct:_NPWindow
+colormap	npapi.h	/^  Colormap     colormap;$/;"	m	struct:__anon9
+cond_lock	pool.h	/^	pthread_cond_t cond_lock;$/;"	m	struct:thread_pool
+construct	npfunctions.h	/^  NPN_ConstructProcPtr construct;$/;"	m	struct:_NPNetscapeFuncs
+construct	npruntime.h	/^    NPConstructFunctionPtr construct;$/;"	m	struct:NPClass
+constructor_npfuncs	npp_funcs.c	/^static void constructor_npfuncs(){$/;"	f	file:
+container_of	list.h	40;"	d
+context	npapi.h	/^      CGContextRef context;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon24
+context	npapi.h	/^  CGContextRef context;$/;"	m	struct:NP_CGContext
+context	npapi.h	/^  CGLContextObj context;$/;"	m	struct:NP_GLContext
+convertpoint	npfunctions.h	/^  NPN_ConvertPointPtr convertpoint;$/;"	m	struct:_NPNetscapeFuncs
+createobject	npfunctions.h	/^  NPN_CreateObjectProcPtr createobject;$/;"	m	struct:_NPNetscapeFuncs
+cur	pool.h	/^	unsigned int cur;$/;"	m	struct:thread_pool
+curl	curl_url.h	/^        CURL *curl;$/;"	m	union:stream_data::__anon2
+curl	curl_url.h	/^    CURL *curl;$/;"	m	struct:header_data
+curl	player.c	/^    CURL *curl;$/;"	m	struct:curl_header_data	file:
+curl_header_data	player.c	/^struct curl_header_data{$/;"	s	file:
+data	curl_url.h	/^        buf_data *data;$/;"	m	union:stream_data::__anon2
+data	curl_url.h	/^    buf_data *data;$/;"	m	struct:url_data
+data	curl_url.h	/^    char *data;$/;"	m	struct:body_data
+data	npapi.h	/^      void *data;$/;"	m	struct:_NPAsyncSurface::__anon5::__anon6
+data	npapi.h	/^  char*    data;       \/* image pointer *\/$/;"	m	struct:_NPImageExpose
+data	npapi.h	/^  } data;$/;"	m	struct:_NPCocoaEvent	typeref:union:_NPCocoaEvent::__anon21
+dataSize	npapi.h	/^  NPSize   dataSize;   \/* Data buffer size *\/$/;"	m	struct:_NPImageExpose
+deallocate	npruntime.h	/^    NPDeallocateFunctionPtr deallocate;$/;"	m	struct:NPClass
+deltaX	npapi.h	/^      double   deltaX;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon22
+deltaY	npapi.h	/^      double   deltaY;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon22
+deltaZ	npapi.h	/^      double   deltaZ;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon22
+depth	npapi.h	/^  int32_t  depth;      \/* Depth of image pointer *\/$/;"	m	struct:_NPImageExpose
+depth	npapi.h	/^  unsigned int depth;$/;"	m	struct:__anon9
+destroy	npfunctions.h	/^  NPP_DestroyProcPtr destroy;$/;"	m	struct:_NPPluginFuncs
+destroy	player.c	/^static void destroy(GtkWidget *widget, gpointer data) {$/;"	f	file:
+destroystream	npfunctions.h	/^  NPN_DestroyStreamProcPtr destroystream;$/;"	m	struct:_NPNetscapeFuncs
+destroystream	npfunctions.h	/^  NPP_DestroyStreamProcPtr destroystream;$/;"	m	struct:_NPPluginFuncs
+destructor_npfuncs	npp_funcs.c	/^static void destructor_npfuncs(){$/;"	f	file:
+didComposite	npfunctions.h	/^  NPP_DidCompositePtr didComposite;$/;"	m	struct:_NPPluginFuncs
+display	npapi.h	/^  Display*     display;$/;"	m	struct:__anon9
+doubleValue	npruntime.h	/^        double doubleValue;$/;"	m	union:_NPVariant::__anon29
+draw	npapi.h	/^    } draw;$/;"	m	union:_NPCocoaEvent::__anon21	typeref:struct:_NPCocoaEvent::__anon21::__anon24
+dwProductVersionLS	npfunctions.h	/^  unsigned long dwProductVersionLS;$/;"	m	struct:_NPPluginData
+dwProductVersionMS	npfunctions.h	/^  unsigned long dwProductVersionMS;$/;"	m	struct:_NPPluginData
+embedPrint	npapi.h	/^    NPEmbedPrint embedPrint; \/* if mode is NP_EMBED *\/$/;"	m	union:_NPPrint::__anon18
+end	npapi.h	/^  uint32_t end;$/;"	m	struct:_NPStream
+end_of_string	player.c	/^static const char *end_of_string( const char *send ) {$/;"	f	file:
+enumerate	npfunctions.h	/^  NPN_EnumerateProcPtr enumerate;$/;"	m	struct:_NPNetscapeFuncs
+enumerate	npruntime.h	/^    NPEnumerationFunctionPtr enumerate;$/;"	m	struct:NPClass
+evaluate	npfunctions.h	/^  NPN_EvaluateProcPtr evaluate;$/;"	m	struct:_NPNetscapeFuncs
+event	npapi.h	/^  uint16_t event;$/;"	m	struct:_NPEvent
+event	npapi.h	/^  uint32_t event;$/;"	m	struct:_NPEvent
+event	npfunctions.h	/^  NPP_HandleEventProcPtr event;$/;"	m	struct:_NPPluginFuncs
+false	nptypes.h	116;"	d
+false	nptypes.h	68;"	d
+false	nptypes.h	87;"	d
+finalizeasyncsurface	npfunctions.h	/^  NPN_FinalizeAsyncSurfacePtr finalizeasyncsurface;$/;"	m	struct:_NPNetscapeFuncs
+first	list.h	/^		struct hlist_node *first;$/;"	m	struct:hlist_head	typeref:struct:hlist_head::hlist_node
+flash_plugin_handle	player.c	/^void *flash_plugin_handle;$/;"	v
+focus	npapi.h	/^    } focus;$/;"	m	union:_NPCocoaEvent::__anon21	typeref:struct:_NPCocoaEvent::__anon21::__anon25
+forceredraw	npfunctions.h	/^  NPN_ForceRedrawProcPtr forceredraw;$/;"	m	struct:_NPNetscapeFuncs
+format	npapi.h	/^  NPImageFormat format;$/;"	m	struct:_NPAsyncSurface
+fp	npapi.h	/^  FILE* fp;$/;"	m	struct:__anon10
+freeNPIds	player.c	/^void freeNPIds() {$/;"	f
+fullPrint	npapi.h	/^    NPFullPrint fullPrint;   \/* if mode is NP_FULL *\/$/;"	m	union:_NPPrint::__anon18
+g_NPID	npn_funcs.c	/^static struct MyNPID g_NPID = {0, NULL};$/;"	v	typeref:struct:MyNPID	file:
+g_pool	main.c	/^struct thread_pool *g_pool = NULL;$/;"	v	typeref:struct:thread_pool
+getJavaEnv	npfunctions.h	/^  NPN_GetJavaEnvProcPtr getJavaEnv;$/;"	m	struct:_NPNetscapeFuncs
+getJavaPeer	npfunctions.h	/^  NPN_GetJavaPeerProcPtr getJavaPeer;$/;"	m	struct:_NPNetscapeFuncs
+getNPId	player.c	/^static const char *getNPId( NPIdentifier id ) {$/;"	f	file:
+getProperty	npruntime.h	/^    NPGetPropertyFunctionPtr getProperty;$/;"	m	struct:NPClass
+get_url	curl_url.c	/^int get_url(char *url, void *data){$/;"	f
+getauthenticationinfo	npfunctions.h	/^  NPN_GetAuthenticationInfoPtr getauthenticationinfo;$/;"	m	struct:_NPNetscapeFuncs
+getintidentifier	npfunctions.h	/^  NPN_GetIntIdentifierProcPtr getintidentifier;$/;"	m	struct:_NPNetscapeFuncs
+getproperty	npfunctions.h	/^  NPN_GetPropertyProcPtr getproperty;$/;"	m	struct:_NPNetscapeFuncs
+getsiteswithdata	npfunctions.h	/^  NPP_GetSitesWithDataPtr getsiteswithdata;$/;"	m	struct:_NPPluginFuncs
+getstringidentifier	npfunctions.h	/^  NPN_GetStringIdentifierProcPtr getstringidentifier;$/;"	m	struct:_NPNetscapeFuncs
+getstringidentifiers	npfunctions.h	/^  NPN_GetStringIdentifiersProcPtr getstringidentifiers;$/;"	m	struct:_NPNetscapeFuncs
+geturl	npfunctions.h	/^  NPN_GetURLProcPtr geturl;$/;"	m	struct:_NPNetscapeFuncs
+geturlnotify	npfunctions.h	/^  NPN_GetURLNotifyProcPtr geturlnotify;$/;"	m	struct:_NPNetscapeFuncs
+getvalue	npfunctions.h	/^  NPN_GetValueProcPtr getvalue;$/;"	m	struct:_NPNetscapeFuncs
+getvalue	npfunctions.h	/^  NPP_GetValueProcPtr getvalue;$/;"	m	struct:_NPPluginFuncs
+getvalueforurl	npfunctions.h	/^  NPN_GetValueForURLPtr getvalueforurl;$/;"	m	struct:_NPNetscapeFuncs
+gotfocus	npfunctions.h	/^  NPP_GotFocusPtr gotfocus;$/;"	m	struct:_NPPluginFuncs
+handle	npp_funcs.c	/^static void *handle;$/;"	v	file:
+handleevent	npfunctions.h	/^  NPN_HandleEventPtr handleevent;$/;"	m	struct:_NPNetscapeFuncs
+hasFocus	npapi.h	/^      NPBool hasFocus;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon25
+hasMethod	npruntime.h	/^    NPHasMethodFunctionPtr hasMethod;$/;"	m	struct:NPClass
+hasProperty	npruntime.h	/^    NPHasPropertyFunctionPtr hasProperty;$/;"	m	struct:NPClass
+hasmethod	npfunctions.h	/^  NPN_HasMethodProcPtr hasmethod;$/;"	m	struct:_NPNetscapeFuncs
+hasproperty	npfunctions.h	/^  NPN_HasPropertyProcPtr hasproperty;$/;"	m	struct:_NPNetscapeFuncs
+hdata	player.c	/^    struct curl_header_data *hdata;$/;"	m	struct:my_stream	typeref:struct:my_stream::curl_header_data	file:
+header_data	curl_url.h	/^typedef struct header_data{$/;"	s
+header_data	curl_url.h	/^}header_data;$/;"	t	typeref:struct:header_data
+header_stream	player.c	/^size_t header_stream(char *ptr, size_t size, size_t n, void *data){ $/;"	f
+headers	npapi.h	/^  const    char* headers; \/* Response headers from host.$/;"	m	struct:_NPStream
+height	npapi.h	/^      double height;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon24
+height	npapi.h	/^  int32_t height;$/;"	m	struct:_NPSize
+height	npapi.h	/^  uint32_t height;     \/* Expose height *\/$/;"	m	struct:_NPImageExpose
+height	npapi.h	/^  uint32_t height;$/;"	m	struct:_NPWindow
+hlist_add_after	list.h	/^static inline void hlist_add_after(struct hlist_node *n,$/;"	f
+hlist_add_before	list.h	/^static inline void hlist_add_before(struct hlist_node *n,$/;"	f
+hlist_add_head	list.h	/^static inline void hlist_add_head(struct hlist_node *n, struct hlist_head *h)$/;"	f
+hlist_del	list.h	/^static inline void hlist_del(struct hlist_node *n)$/;"	f
+hlist_del_init	list.h	/^static inline void hlist_del_init(struct hlist_node *n)$/;"	f
+hlist_empty	list.h	/^static inline int hlist_empty(const struct hlist_head *h)$/;"	f
+hlist_entry	list.h	460;"	d
+hlist_for_each	list.h	462;"	d
+hlist_for_each_entry	list.h	477;"	d
+hlist_for_each_entry_continue	list.h	489;"	d
+hlist_for_each_entry_from	list.h	501;"	d
+hlist_for_each_entry_safe	list.h	514;"	d
+hlist_for_each_safe	list.h	466;"	d
+hlist_head	list.h	/^struct hlist_head {$/;"	s
+hlist_node	list.h	/^struct hlist_node {$/;"	s
+hlist_unhashed	list.h	/^static inline int hlist_unhashed(const struct hlist_node *h)$/;"	f
+httpType	curl_url.h	/^    CURL_HTTP_TYPE httpType;$/;"	m	struct:url_data
+iNP_GetMIMEDescription	player.c	/^char* (*iNP_GetMIMEDescription)();$/;"	v
+iNP_Initialize	player.c	/^NPError (*iNP_Initialize)(NPNetscapeFuncs* bFuncs, NPPluginFuncs* pFuncs);$/;"	v
+iNP_Shutdown	player.c	/^NPError (*iNP_Shutdown)();$/;"	v
+identifierisstring	npfunctions.h	/^  NPN_IdentifierIsStringProcPtr identifierisstring;$/;"	m	struct:_NPNetscapeFuncs
+idstr	npn_funcs.c	/^    char **idstr;$/;"	m	struct:MyNPID	file:
+infoStrings	npfunctions.h	/^ Handle    infoStrings;        \/* STR# formated handle, allocated by plug-in *\/$/;"	m	struct:_BPSupportedMIMETypes
+initNPNetscapeFuncs	player.c	/^void initNPNetscapeFuncs(NPNetscapeFuncs *bFuncs) {$/;"	f
+init_npp	npp_funcs.c	/^void init_npp(NPPluginFuncs *pPluginFuncs){$/;"	f
+initasyncsurface	npfunctions.h	/^  NPN_InitAsyncSurfacePtr initasyncsurface;$/;"	m	struct:_NPNetscapeFuncs
+inst	player.c	/^    NPP inst;$/;"	m	struct:my_stream	file:
+instance	curl_url.h	/^    NPP instance;$/;"	m	struct:url_data
+int16_t	nptypes.h	/^  typedef short int16_t;$/;"	t
+int32_t	nptypes.h	/^  typedef int int32_t;$/;"	t
+int64_t	nptypes.h	/^  typedef long long int64_t;$/;"	t
+intValue	npruntime.h	/^        int32_t intValue;$/;"	m	union:_NPVariant::__anon29
+int_val	player.c	/^typedef intptr_t int_val;$/;"	t	file:
+intfromidentifier	npfunctions.h	/^  NPN_IntFromIdentifierProcPtr intfromidentifier;$/;"	m	struct:_NPNetscapeFuncs
+invalidate	npruntime.h	/^    NPInvalidateFunctionPtr invalidate;$/;"	m	struct:NPClass
+invalidaterect	npfunctions.h	/^  NPN_InvalidateRectProcPtr invalidaterect;$/;"	m	struct:_NPNetscapeFuncs
+invalidateregion	npfunctions.h	/^  NPN_InvalidateRegionProcPtr invalidateregion;$/;"	m	struct:_NPNetscapeFuncs
+invoke	npfunctions.h	/^  NPN_InvokeProcPtr invoke;$/;"	m	struct:_NPNetscapeFuncs
+invoke	npruntime.h	/^    NPInvokeFunctionPtr invoke;$/;"	m	struct:NPClass
+invokeDefault	npfunctions.h	/^  NPN_InvokeDefaultProcPtr invokeDefault;$/;"	m	struct:_NPNetscapeFuncs
+invokeDefault	npruntime.h	/^    NPInvokeDefaultFunctionPtr invokeDefault;$/;"	m	struct:NPClass
+isARepeat	npapi.h	/^      NPBool      isARepeat;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon23
+isheader	curl_url.h	/^    bool isheader;$/;"	m	struct:stream_data
+javaClass	npfunctions.h	/^  void* javaClass;$/;"	m	struct:_NPPluginFuncs
+kBPSupportedMIMETypesStructVers_1	npfunctions.h	/^ kBPSupportedMIMETypesStructVers_1    = 1$/;"	e	enum:__anon27
+kNPEventHandled	npapi.h	260;"	d
+kNPEventNotHandled	npapi.h	259;"	d
+kNPEventStartIME	npapi.h	262;"	d
+key	npapi.h	/^    } key;$/;"	m	union:_NPCocoaEvent::__anon21	typeref:struct:_NPCocoaEvent::__anon21::__anon23
+keyCode	npapi.h	/^      uint16_t    keyCode;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon23
+lParam	npapi.h	/^  uint32_t lParam;$/;"	m	struct:_NPEvent
+lParam	npapi.h	/^  uintptr_t lParam;$/;"	m	struct:_NPEvent
+lastmodified	npapi.h	/^  uint32_t lastmodified;$/;"	m	struct:_NPStream
+left	npapi.h	/^  uint16_t left;$/;"	m	struct:_NPRect
+len	npapi.h	/^  int32_t len;$/;"	m	struct:_NPSavedData
+length	npapi.h	/^  uint32_t length;$/;"	m	struct:_NPByteRange
+list	pool.h	/^	struct list_head list;$/;"	m	struct:pool_work	typeref:struct:pool_work::list_head
+list_add	list.h	/^static inline void list_add(struct list_head *new, struct list_head *head)$/;"	f
+list_add_tail	list.h	/^static inline void list_add_tail(struct list_head *new, struct list_head *head)$/;"	f
+list_del	list.h	/^static inline void list_del(struct list_head *entry)$/;"	f
+list_del_init	list.h	/^static inline void list_del_init(struct list_head *entry)$/;"	f
+list_empty	list.h	/^static inline int list_empty(const struct list_head *head)$/;"	f
+list_entry	list.h	237;"	d
+list_for_each	list.h	246;"	d
+list_for_each_entry	list.h	288;"	d
+list_for_each_entry_continue	list.h	321;"	d
+list_for_each_entry_reverse	list.h	299;"	d
+list_for_each_entry_safe	list.h	333;"	d
+list_for_each_entry_safe_continue	list.h	347;"	d
+list_for_each_entry_safe_reverse	list.h	361;"	d
+list_for_each_prev	list.h	268;"	d
+list_for_each_safe	list.h	278;"	d
+list_head	list.h	/^struct list_head {$/;"	s
+list_move	list.h	/^static inline void list_move(struct list_head *list, struct list_head *head)$/;"	f
+list_move_tail	list.h	/^static inline void list_move_tail(struct list_head *list,$/;"	f
+list_prepare_entry	list.h	311;"	d
+list_splice	list.h	/^static inline void list_splice(struct list_head *list, struct list_head *head)$/;"	f
+list_splice_init	list.h	/^static inline void list_splice_init(struct list_head *list,$/;"	f
+loadFlashPluginSo	player.c	/^void* loadFlashPluginSo() {$/;"	f
+loadNPEntryPoints	player.c	/^void loadNPEntryPoints(void *handle) {$/;"	f
+loadSymbol	player.c	/^void* loadSymbol(void *handle, const char *name) {$/;"	f
+lock	pool.h	/^	pthread_mutex_t lock;$/;"	m	struct:thread_pool
+lostfocus	npfunctions.h	/^  NPP_LostFocusPtr lostfocus;$/;"	m	struct:_NPPluginFuncs
+main	main.c	/^int main(int argc, char **argv){$/;"	f
+main	player.c	/^int main(int argc, char **argv)$/;"	f
+main_window	main.c	/^GtkWidget *main_window = NULL;$/;"	v
+main_window	player.c	/^GtkWidget *main_window;$/;"	v
+matchNPId	player.c	/^static int matchNPId(NPIdentifier id, const char *str) {$/;"	f	file:
+max	pool.h	/^	unsigned int max;$/;"	m	struct:thread_pool
+memalloc	npfunctions.h	/^  NPN_MemAllocProcPtr memalloc;$/;"	m	struct:_NPNetscapeFuncs
+memflush	npfunctions.h	/^  NPN_MemFlushProcPtr memflush;$/;"	m	struct:_NPNetscapeFuncs
+memfree	npfunctions.h	/^  NPN_MemFreeProcPtr memfree;$/;"	m	struct:_NPNetscapeFuncs
+mode	npapi.h	/^  uint16_t mode;               \/* NP_FULL or NP_EMBED *\/$/;"	m	struct:_NPPrint
+modifierFlags	npapi.h	/^      uint32_t    modifierFlags;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon23
+modifierFlags	npapi.h	/^      uint32_t modifierFlags;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon22
+mouse	npapi.h	/^    } mouse;$/;"	m	union:_NPCocoaEvent::__anon21	typeref:struct:_NPCocoaEvent::__anon21::__anon22
+myAlloc	player.c	/^NPObject *myAlloc(NPP npp, NPClass *aClass){$/;"	f
+myFree	player.c	/^static void myFree(NPObject *npobj){$/;"	f	file:
+myInvalid	player.c	/^void myInvalid(NPObject *npobj){$/;"	f
+my_stream	player.c	/^struct my_stream{$/;"	s	file:
+ndata	npapi.h	/^  void*    ndata; \/* netscape private data *\/$/;"	m	struct:_NPStream
+ndata	npapi.h	/^  void* ndata;      \/* netscape private data *\/$/;"	m	struct:_NPP
+newp	npfunctions.h	/^  NPP_NewProcPtr newp;$/;"	m	struct:_NPPluginFuncs
+newstream	npfunctions.h	/^  NPN_NewStreamProcPtr newstream;$/;"	m	struct:_NPNetscapeFuncs
+newstream	npfunctions.h	/^  NPP_NewStreamProcPtr newstream;$/;"	m	struct:_NPPluginFuncs
+next	list.h	/^		struct hlist_node *next, **pprev;$/;"	m	struct:hlist_node	typeref:struct:hlist_node::hlist_node
+next	list.h	/^		struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::list_head
+next	npapi.h	/^  struct _NPByteRange* next;$/;"	m	struct:_NPByteRange	typeref:struct:_NPByteRange::_NPByteRange
+notifyData	curl_url.h	/^    void *notifyData;$/;"	m	struct:url_data
+notifyData	npapi.h	/^  void*    notifyData;$/;"	m	struct:_NPStream
+np_id_count	player.c	/^static int_val np_id_count = 0;$/;"	v	file:
+np_ids	player.c	/^static char **np_ids = NULL;$/;"	v	file:
+npapi_h_	npapi.h	39;"	d
+npcode	curl_url.h	/^    int npcode;$/;"	m	struct:url_data
+npfunctions_h_	npfunctions.h	39;"	d
+npstream_write	npn_funcs.c	/^static unsigned int npstream_write(NPP instance, NPStream *stream, char *buf, unsigned int len){$/;"	f	file:
+nptypes_h_	nptypes.h	40;"	d
+npwindow_construct	main.c	/^static NPWindow *npwindow_construct(GtkWidget *widget, unsigned int width, unsigned int height){$/;"	f	file:
+npwindow_construct	player.c	/^static NPWindow * npwindow_construct (GtkWidget *widget) {$/;"	f	file:
+num	npn_funcs.c	/^    unsigned int num;$/;"	m	struct:MyNPID	file:
+objectValue	npruntime.h	/^        NPObject *objectValue;$/;"	m	union:_NPVariant::__anon29
+offset	curl_url.h	/^    unsigned int offset;$/;"	m	struct:buf_data
+offset	npapi.h	/^  int32_t  offset; \/* negative offset means from the end *\/$/;"	m	struct:_NPByteRange
+offsetof	list.h	30;"	d
+pFileExtents	npfunctions.h	/^  char *pFileExtents;$/;"	m	struct:_NPPluginData
+pFileOpenTemplate	npfunctions.h	/^  char *pFileOpenTemplate;$/;"	m	struct:_NPPluginData
+pFuncs	npfunctions.h	/^NP_EXPORT(NPError)     NP_GetEntryPoints(NPPluginFuncs* pFuncs);$/;"	v
+pMimeTypes	npfunctions.h	/^  char *pMimeTypes;$/;"	m	struct:_NPPluginData
+pProductDescription	npfunctions.h	/^  char *pProductDescription;$/;"	m	struct:_NPPluginData
+pProductName	npfunctions.h	/^  char *pProductName;$/;"	m	struct:_NPPluginData
+pdata	npapi.h	/^  void*    pdata; \/* plug-in private data *\/$/;"	m	struct:_NPStream
+pdata	npapi.h	/^  void* pdata;      \/* plug-in private data *\/$/;"	m	struct:_NPP
+pids	pool.h	/^	pthread_t *pids;$/;"	m	struct:thread_pool
+platformPrint	npapi.h	/^  void* platformPrint; \/* Platform-specific printing info *\/$/;"	m	struct:_NPEmbedPrint
+platformPrint	npapi.h	/^  void* platformPrint; \/* Platform-specific printing info *\/$/;"	m	struct:_NPFullPrint
+plug_removed_cb	main.c	/^static gboolean plug_removed_cb (GtkWidget *widget, gpointer data) {$/;"	f	file:
+plug_removed_cb	player.c	/^static gboolean plug_removed_cb (GtkWidget *widget, gpointer data) {$/;"	f	file:
+pluginFuncs	player.c	/^NPPluginFuncs pluginFuncs;$/;"	v
+pluginPrinted	npapi.h	/^  NPBool pluginPrinted;\/* Set TRUE if plugin handled fullscreen printing *\/$/;"	m	struct:_NPFullPrint
+pluginX	npapi.h	/^      double   pluginX;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon22
+pluginY	npapi.h	/^      double   pluginY;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon22
+pluginthreadasynccall	npfunctions.h	/^  NPN_PluginThreadAsyncCallProcPtr pluginthreadasynccall;$/;"	m	struct:_NPNetscapeFuncs
+pool_add	pool.c	/^void pool_add(struct thread_pool *pool, void *(*proc)(void *arg), void *arg){$/;"	f
+pool_destroy	pool.c	/^void pool_destroy(struct thread_pool *pool){$/;"	f
+pool_init	pool.c	/^struct thread_pool *pool_init(unsigned int num){$/;"	f
+pool_work	pool.h	/^struct pool_work{$/;"	s
+poppopupsenabledstate	npfunctions.h	/^  NPN_PopPopupsEnabledStateProcPtr poppopupsenabledstate;$/;"	m	struct:_NPNetscapeFuncs
+popupcontextmenu	npfunctions.h	/^  NPN_PopUpContextMenuPtr popupcontextmenu;$/;"	m	struct:_NPNetscapeFuncs
+port	npapi.h	/^  CGrafPtr port;$/;"	m	struct:NP_Port
+portx	npapi.h	/^  int32_t portx; \/* position inside the topmost window *\/$/;"	m	struct:NP_Port
+porty	npapi.h	/^  int32_t porty;$/;"	m	struct:NP_Port
+postData	curl_url.h	/^    char *postData;$/;"	m	struct:buf_data
+postData	curl_url.h	/^    char *postData;$/;"	m	struct:url_data
+post_url	curl_url.c	/^int post_url(char *url, void *data){$/;"	f
+posturl	npfunctions.h	/^  NPN_PostURLProcPtr posturl;$/;"	m	struct:_NPNetscapeFuncs
+posturlnotify	npfunctions.h	/^  NPN_PostURLNotifyProcPtr posturlnotify;$/;"	m	struct:_NPNetscapeFuncs
+pprev	list.h	/^		struct hlist_node *next, **pprev;$/;"	m	struct:hlist_node	typeref:struct:hlist_node::
+prev	list.h	/^		struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::
+print	npapi.h	/^  } print;$/;"	m	struct:_NPPrint	typeref:union:_NPPrint::__anon18
+print	npfunctions.h	/^  NPP_PrintProcPtr print;$/;"	m	struct:_NPPluginFuncs
+printBrowserEntrypoints	player.c	/^void printBrowserEntrypoints(NPNetscapeFuncs* pFuncs) {$/;"	f
+printOne	npapi.h	/^  NPBool printOne;     \/* TRUE if plugin should print one copy to default$/;"	m	struct:_NPFullPrint
+printPluginEntrypoints	player.c	/^void printPluginEntrypoints(NPPluginFuncs* pFuncs) {$/;"	f
+proc	pool.h	/^	void *(*proc)(void *arg);$/;"	m	struct:pool_work
+pushpopupsenabledstate	npfunctions.h	/^  NPN_PushPopupsEnabledStateProcPtr pushpopupsenabledstate;$/;"	m	struct:_NPNetscapeFuncs
+redir	curl_url.h	/^    bool *redir;$/;"	m	struct:body_data
+redir	curl_url.h	/^    bool *redir;$/;"	m	struct:header_data
+redir	curl_url.h	/^    bool *redir;$/;"	m	struct:stream_data
+redir	player.c	/^    bool redir;$/;"	m	struct:curl_header_data	file:
+referenceCount	npruntime.h	/^    uint32_t referenceCount;$/;"	m	struct:NPObject
+releaseobject	npfunctions.h	/^  NPN_ReleaseObjectProcPtr releaseobject;$/;"	m	struct:_NPNetscapeFuncs
+releasevariantvalue	npfunctions.h	/^  NPN_ReleaseVariantValueProcPtr releasevariantvalue;$/;"	m	struct:_NPNetscapeFuncs
+reloadplugins	npfunctions.h	/^  NPN_ReloadPluginsProcPtr reloadplugins;$/;"	m	struct:_NPNetscapeFuncs
+removeProperty	npruntime.h	/^    NPRemovePropertyFunctionPtr removeProperty;$/;"	m	struct:NPClass
+removeproperty	npfunctions.h	/^  NPN_RemovePropertyProcPtr removeproperty;$/;"	m	struct:_NPNetscapeFuncs
+requestread	npfunctions.h	/^  NPN_RequestReadProcPtr requestread;$/;"	m	struct:_NPNetscapeFuncs
+resolveNPId	player.c	/^static NPIdentifier resolveNPId( const char *id ) {$/;"	f	file:
+retainobject	npfunctions.h	/^  NPN_RetainObjectProcPtr retainobject;$/;"	m	struct:_NPNetscapeFuncs
+right	npapi.h	/^  uint16_t right;$/;"	m	struct:_NPRect
+routine	pool.c	/^static void *routine(void *arg){$/;"	f	file:
+scaleX	npapi.h	/^  float    scaleX;     \/* scale X matrix value *\/$/;"	m	struct:_NPImageExpose
+scaleY	npapi.h	/^  float    scaleY;     \/* scale Y matrix value *\/$/;"	m	struct:_NPImageExpose
+scheduletimer	npfunctions.h	/^  NPN_ScheduleTimerPtr scheduletimer;$/;"	m	struct:_NPNetscapeFuncs
+setProperty	npruntime.h	/^    NPSetPropertyFunctionPtr setProperty;$/;"	m	struct:NPClass
+setcurrentasyncsurface	npfunctions.h	/^  NPN_SetCurrentAsyncSurfacePtr setcurrentasyncsurface;$/;"	m	struct:_NPNetscapeFuncs
+setexception	npfunctions.h	/^  NPN_SetExceptionProcPtr setexception;$/;"	m	struct:_NPNetscapeFuncs
+setproperty	npfunctions.h	/^  NPN_SetPropertyProcPtr setproperty;$/;"	m	struct:_NPNetscapeFuncs
+setvalue	npfunctions.h	/^  NPN_SetValueProcPtr setvalue;$/;"	m	struct:_NPNetscapeFuncs
+setvalue	npfunctions.h	/^  NPP_SetValueProcPtr setvalue;$/;"	m	struct:_NPPluginFuncs
+setvalueforurl	npfunctions.h	/^  NPN_SetValueForURLPtr setvalueforurl;$/;"	m	struct:_NPNetscapeFuncs
+setwindow	npfunctions.h	/^  NPP_SetWindowProcPtr setwindow;$/;"	m	struct:_NPPluginFuncs
+sharedHandle	npapi.h	/^    HANDLE sharedHandle;$/;"	m	union:_NPAsyncSurface::__anon5
+size	curl_url.h	/^    unsigned int size;$/;"	m	struct:buf_data
+size	npapi.h	/^  NPSize size;$/;"	m	struct:_NPAsyncSurface
+size	npfunctions.h	/^  uint16_t size;$/;"	m	struct:_NPNetscapeFuncs
+size	npfunctions.h	/^  uint16_t size;$/;"	m	struct:_NPPluginFuncs
+socket_unrealize_cb	main.c	/^static void socket_unrealize_cb(GtkWidget *widget, gpointer data) {$/;"	f	file:
+socket_unrealize_cb	player.c	/^static void socket_unrealize_cb(GtkWidget *widget, gpointer data) {$/;"	f	file:
+status	npfunctions.h	/^  NPN_StatusProcPtr status;$/;"	m	struct:_NPNetscapeFuncs
+stream	player.c	/^    NPStream *stream;$/;"	m	struct:my_stream	file:
+stream_data	curl_url.h	/^typedef struct stream_data{$/;"	s
+stream_data	curl_url.h	/^}stream_data;$/;"	t	typeref:struct:stream_data
+stream_write	npn_funcs.c	/^gboolean stream_write(gpointer user_data){$/;"	f
+stride	npapi.h	/^      uint32_t stride;$/;"	m	struct:_NPAsyncSurface::__anon5::__anon6
+stride	npapi.h	/^  int32_t  stride;     \/* Stride of data image pointer *\/$/;"	m	struct:_NPImageExpose
+stringValue	npruntime.h	/^        NPString stringValue;$/;"	m	union:_NPVariant::__anon29
+structVersion	npfunctions.h	/^ SInt32    structVersion;      \/* struct version *\/$/;"	m	struct:_BPSupportedMIMETypes
+structVersion	npruntime.h	/^    uint32_t structVersion;$/;"	m	struct:NPClass
+text	npapi.h	/^      NPNSString *text;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon26
+text	npapi.h	/^    } text;$/;"	m	union:_NPCocoaEvent::__anon21	typeref:struct:_NPCocoaEvent::__anon21::__anon26
+thread_pool	pool.h	/^struct thread_pool{$/;"	s
+top	npapi.h	/^  uint16_t top;$/;"	m	struct:_NPRect
+traceObjectOnCall	player.c	/^static void traceObjectOnCall(const char *f, NPObject *o){$/;"	f	file:
+translateX	npapi.h	/^  float    translateX; \/* translate X matrix value *\/$/;"	m	struct:_NPImageExpose
+translateY	npapi.h	/^  float    translateY; \/* translate Y matrix value *\/$/;"	m	struct:_NPImageExpose
+true	nptypes.h	115;"	d
+true	nptypes.h	67;"	d
+true	nptypes.h	86;"	d
+type	npapi.h	/^  NPCocoaEventType type;$/;"	m	struct:_NPCocoaEvent
+type	npapi.h	/^  NPWindowType type; \/* Is this a window or a drawable? *\/$/;"	m	struct:_NPWindow
+type	npapi.h	/^  int32_t      type;$/;"	m	struct:__anon9
+type	npapi.h	/^  int32_t type;$/;"	m	struct:__anon10
+type	npapi.h	/^  int32_t type;$/;"	m	struct:__anon8
+type	npruntime.h	/^    NPVariantType type;$/;"	m	struct:_NPVariant
+typeStrings	npfunctions.h	/^ Handle    typeStrings;        \/* STR# formated handle, allocated by plug-in *\/$/;"	m	struct:_BPSupportedMIMETypes
+uagent	npfunctions.h	/^  NPN_UserAgentProcPtr uagent;$/;"	m	struct:_NPNetscapeFuncs
+uagent	player.c	/^const char * uagent = "Mozilla\/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.13) Gecko\/20101206 Ubuntu\/10.10 (maverick) Firefox\/3.6.13";$/;"	v
+uint16_t	nptypes.h	/^  typedef unsigned short uint16_t;$/;"	t
+uint32_t	nptypes.h	/^  typedef u_int32_t uint32_t;$/;"	t
+uint32_t	nptypes.h	/^  typedef unsigned int uint32_t;$/;"	t
+uint64_t	nptypes.h	/^  typedef u_int64_t uint64_t;$/;"	t
+uint64_t	nptypes.h	/^  typedef unsigned long long uint64_t;$/;"	t
+unescape	player.c	/^static int unescape( char *str, int *ssize ) {$/;"	f	file:
+unfocusinstance	npfunctions.h	/^  NPN_UnfocusInstancePtr unfocusinstance;$/;"	m	struct:_NPNetscapeFuncs
+unscheduletimer	npfunctions.h	/^  NPN_UnscheduleTimerPtr unscheduletimer;$/;"	m	struct:_NPNetscapeFuncs
+url	curl_url.h	/^    char *url;$/;"	m	struct:url_data
+url	npapi.h	/^  const    char* url;$/;"	m	struct:_NPStream
+url_data	curl_url.h	/^typedef struct url_data{$/;"	s
+url_data	curl_url.h	/^}url_data;$/;"	t	typeref:struct:url_data
+url_worker	npn_funcs.c	/^static void *url_worker(void *arg){$/;"	f	file:
+urlnotify	npfunctions.h	/^  NPP_URLNotifyProcPtr urlnotify;$/;"	m	struct:_NPPluginFuncs
+urlredirectnotify	npfunctions.h	/^  NPP_URLRedirectNotifyPtr urlredirectnotify;$/;"	m	struct:_NPPluginFuncs
+urlredirectresponse	npfunctions.h	/^  NPN_URLRedirectResponsePtr urlredirectresponse;$/;"	m	struct:_NPNetscapeFuncs
+utf8fromidentifier	npfunctions.h	/^  NPN_UTF8FromIdentifierProcPtr utf8fromidentifier;$/;"	m	struct:_NPNetscapeFuncs
+value	npruntime.h	/^    } value;$/;"	m	struct:_NPVariant	typeref:union:_NPVariant::__anon29
+version	npapi.h	/^  uint32_t version;$/;"	m	struct:_NPAsyncSurface
+version	npapi.h	/^  uint32_t version;$/;"	m	struct:_NPCocoaEvent
+version	npfunctions.h	/^  uint16_t version;$/;"	m	struct:_NPNetscapeFuncs
+version	npfunctions.h	/^  uint16_t version;$/;"	m	struct:_NPPluginFuncs
+visual	npapi.h	/^  Visual*      visual;$/;"	m	struct:__anon9
+wParam	npapi.h	/^  uint32_t wParam;$/;"	m	struct:_NPEvent
+wParam	npapi.h	/^  uintptr_t wParam;$/;"	m	struct:_NPEvent
+width	npapi.h	/^      double width;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon24
+width	npapi.h	/^  int32_t width;$/;"	m	struct:_NPSize
+width	npapi.h	/^  uint32_t width;      \/* Expose width *\/$/;"	m	struct:_NPImageExpose
+width	npapi.h	/^  uint32_t width;  \/* Maximum window size *\/$/;"	m	struct:_NPWindow
+window	npapi.h	/^  NPNSWindow *window;$/;"	m	struct:NP_GLContext
+window	npapi.h	/^  NPWindow window;$/;"	m	struct:_NPEmbedPrint
+window	npapi.h	/^  void *window; \/* A WindowRef under the Carbon event model. *\/$/;"	m	struct:NP_CGContext
+window	npapi.h	/^  void *window; \/* Can be either an NSWindow or a WindowRef depending on the event model *\/$/;"	m	struct:NP_GLContext
+window	npapi.h	/^  void* window;  \/* Platform specific window handle *\/$/;"	m	struct:_NPWindow
+work_head	pool.h	/^	struct list_head work_head;$/;"	m	struct:thread_pool	typeref:struct:thread_pool::list_head
+write	npfunctions.h	/^  NPN_WriteProcPtr write;$/;"	m	struct:_NPNetscapeFuncs
+write	npfunctions.h	/^  NPP_WriteProcPtr write;$/;"	m	struct:_NPPluginFuncs
+write_func	curl_url.c	/^static size_t write_func(char *ptr, size_t size, size_t n, void *data){$/;"	f	file:
+write_stream	player.c	/^size_t write_stream(char *ptr, size_t size, size_t n, void *data){ $/;"	f
+writeready	npfunctions.h	/^  NPP_WriteReadyProcPtr writeready;$/;"	m	struct:_NPPluginFuncs
+ws_info	npapi.h	/^  void * ws_info; \/* Platform-dependent additional data *\/$/;"	m	struct:_NPWindow
+x	npapi.h	/^      double x;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon24
+x	npapi.h	/^  int32_t  x;          \/* Expose x *\/$/;"	m	struct:_NPImageExpose
+x	npapi.h	/^  int32_t  x;      \/* Position of top left corner relative *\/$/;"	m	struct:_NPWindow
+y	npapi.h	/^      double y;$/;"	m	struct:_NPCocoaEvent::__anon21::__anon24
+y	npapi.h	/^  int32_t  y;          \/* Expose y *\/$/;"	m	struct:_NPImageExpose
+y	npapi.h	/^  int32_t  y;      \/* to a netscape page. *\/$/;"	m	struct:_NPWindow
