@@ -25,5 +25,8 @@ extern NPP_URLRedirectNotifyPtr My_NPP_URLRedirectNotify;
 extern NPP_ClearSiteDataPtr My_NPP_ClearSiteData;
 extern NPP_GetSitesWithDataPtr My_NPP_GetSitesWithData;
 extern NPP_DidCompositePtr My_NPP_DidComposite;
-
+#if 1
+void constructor_npfuncs();
+void destructor_npfuncs();
+#endif
 #endif

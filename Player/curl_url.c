@@ -8,13 +8,13 @@ static size_t write_func(char *ptr, size_t size, size_t n, void *data){
 
 
     if(pdata->isheader){
-        printf("%s", ptr);
+        //printf("%s", ptr);
         if(strstr(ptr, "HTTP/1.1 30"))
             *pdata->redir = true;
         if(*pdata->redir && (tmp = strstr(ptr, "Location: "))){
             tmp += sizeof("Location:");
             *strstr(tmp, "\r\n") = 0;
-            printf("+++++%s\n", tmp);
+            //printf("+++++%s\n", tmp);
             curl_easy_setopt(pdata->curl, CURLOPT_URL, tmp);
         }
     }else{
@@ -42,7 +42,7 @@ static size_t write_func(char *ptr, size_t size, size_t n, void *data){
     return len;
 }
 
-int get_url(char *url, void *data){
+int get_url(char *url, void *data, char *cookie){
     int ret;
     bool redir;;
     stream_data hdata;
@@ -58,16 +58,17 @@ int get_url(char *url, void *data){
     bdata.redir = &redir;
     bdata.data = data;
 
-
     curl_easy_setopt(curl, CURLOPT_URL, url);
     curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1);
+    curl_easy_setopt(curl, CURLOPT_COOKIE, cookie); 
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L); 
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L); 
-    //curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 3);
+    curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 2);
     //curl_easy_setopt(curl, CURLOPT_USERAGENT, "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.13) Gecko/20101206 Ubuntu/10.10 (maverick) Firefox/3.6.13");
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_func);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &bdata);
     curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+    //curl_easy_setopt(curl, CURLOPT_TIMEOUT, 2L);
     //curl_easy_setopt(curl, CURLOPT_HEADERFUNCTION, write_func);
     //curl_easy_setopt(curl, CURLOPT_HEADERDATA, &hdata);
     //curl_easy_setopt(curl, CURLOPT_COOKIEJAR, "/tmp/tmp.txt");
@@ -77,19 +78,20 @@ int get_url(char *url, void *data){
     //printf("%s\n", url);
     //int i = 0;
     //do{
-    //    i++;
-    //    redir = false;
+        //    i++;
+        //    redir = false;
         if(CURLE_OK != curl_easy_perform(curl))
             ret = NPRES_NETWORK_ERR;
-    //}while(redir);
-    long code;
-    double size;
-    curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &code);
-    curl_easy_getinfo(curl, CURLINFO_SIZE_DOWNLOAD, &size);
-    fprintf(stderr, "CODE: %ld, %lf\t%s\n", code, url, size);
+        long code;
+        double size;
+        curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &code);
+        curl_easy_getinfo(curl, CURLINFO_SIZE_DOWNLOAD, &size);
+        fprintf(stderr, "CODE: %ld, %lf\t%s\n", code, size, url);
+    //}while(0);
 
     curl_easy_cleanup(curl);
-    buf_data *bd = data;
+
+    //buf_data *bd = data;
     //printf("length: %d\n", bd->offset);
     /*
     if(bd->buf){
@@ -102,7 +104,7 @@ int get_url(char *url, void *data){
     return ret;
 }
 
-int post_url(char *url, void *data){
+int post_url(char *url, void *data, char *cookie){
     int ret;
     int len;
     char *tmp;
@@ -135,9 +137,10 @@ int post_url(char *url, void *data){
 
     curl_easy_setopt(curl, CURLOPT_URL, url);
     curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);
+    curl_easy_setopt(curl, CURLOPT_COOKIE, cookie); 
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L); 
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L); 
-    //curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 3);
+    //curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 2);
     //curl_easy_setopt(curl, CURLOPT_POST, 1L);
     curl_easy_setopt(curl, CURLOPT_POSTFIELDS, tmp);
     curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, len);
@@ -155,10 +158,16 @@ int post_url(char *url, void *data){
     if(CURLE_OK != curl_easy_perform(curl))
         ret = NPRES_NETWORK_ERR;
 
+    long code;
+    double size;
+    curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &code);
+    curl_easy_getinfo(curl, CURLINFO_SIZE_DOWNLOAD, &size);
+    fprintf(stderr, "POST+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++CODE: %ld, %lf\t%s\n", code, size, url);
+
     curl_easy_cleanup(curl);
     curl_slist_free_all(list);
 
-    buf_data *bd = data;
+    //buf_data *bd = data;
     //printf("post ------ length: %d\n", bd->offset);
     //if(bd->buf)
     //    printf("%s\n", bd->buf);

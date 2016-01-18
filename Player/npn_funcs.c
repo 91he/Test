@@ -1,15 +1,17 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 #include <gtk/gtk.h>
 #include "npn_funcs.h"
 #include "frapi.h"
+//#include "rbtree.h"
 
 #define	SPECIAL_IDENTIFIER  (NPIdentifier)0x0FEEBBCC
 #define SPECIAL_METHOD_NAME "swhxCall"
 #define FLASH_REQUEST		"__flash__request"
 
 //extern struct thread_pool *g_pool;
-extern FRManager g_FRManager;
+extern struct FRManager g_FRManager;
 
 NPObject *My_NPAllocate(NPP npp, NPClass *aClass){
     printf("%s\n", __func__);
@@ -117,14 +119,14 @@ static NPIdentifier AddNPID(const char *name){
 
     for(i = 0; i < g_NPID.num; i++){
         if(!strcmp(g_NPID.idstr[i], name))
-            return (NPIdentifier)(i + 1);
+            return (NPIdentifier)(intptr_t)(i + 1);
     }
 
     g_NPID.num++;
     g_NPID.idstr = realloc(g_NPID.idstr, g_NPID.num);
     g_NPID.idstr[i] = strdup(name);
 
-    return g_NPID.num;
+    return (NPIdentifier)(intptr_t)g_NPID.num;
 }
 
 static unsigned int npstream_write(NPP instance, NPStream *stream, char *buf, unsigned int len){
@@ -149,6 +151,8 @@ gboolean stream_write(gpointer user_data){
     uint16_t stype;
     url_data *data = user_data;
 
+    if(!g_hash_table_contains(g_FRManager.hash_table, (gpointer)data->instance)) goto done;
+
     memset(&stream, 0,sizeof(stream));
     stream.end = 0;
     stream.url = data->url;
@@ -170,9 +174,9 @@ gboolean stream_write(gpointer user_data){
         }else{
             npstream_write(data->instance, &stream, data->data->buf, data->data->offset);
         }
-    My_NPP_DestroyStream(data->instance, &stream, data->npcode);//TODO
     My_NPP_URLNotify(data->instance, data->url, data->npcode, data->notifyData);
-
+    My_NPP_DestroyStream(data->instance, &stream, data->npcode);//TODO
+done:
     free(data->url);
     if(data->data->buf) free(data->data->buf);
     free(data->data);
@@ -191,14 +195,12 @@ static void *url_worker(void *arg){
     bdata->postData = data->postData;
 
     data->data = bdata;
-    //struct list_head *list = malloc(sizeof(struct list_head));
 
-    //INIT_LIST_HEAD(list);
     if(data->httpType == CURL_HTTP_GET){
         //printf("%s\n", data->url);
-        data->npcode = get_url(data->url, bdata);
+        data->npcode = get_url(data->url, bdata, g_hash_table_lookup(g_FRManager.hash_table, data->instance));
     }else{
-        data->npcode = post_url(data->url, bdata);
+        data->npcode = post_url(data->url, bdata, g_hash_table_lookup(g_FRManager.hash_table, data->instance));
     }
 
     //TODO
@@ -208,7 +210,7 @@ static void *url_worker(void *arg){
 }
 
 static char *StrFromNPID(NPIdentifier id){
-    unsigned int iid = (unsigned int)id;
+    unsigned int iid = (uintptr_t)id;
 
     if(id == SPECIAL_IDENTIFIER)
         return SPECIAL_METHOD_NAME;

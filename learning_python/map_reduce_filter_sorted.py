@@ -6,6 +6,7 @@ import math
 list = ['adam', 'LIST', 'barT']
 
 def fun(name):
+	return name[0].upper() + name[1:].lower()
 	tmp = name.lower()
 	return tmp[0].upper() + tmp[1:]
 

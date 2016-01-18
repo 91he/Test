@@ -49,7 +49,7 @@ typedef struct url_data{
     int npcode;
 }url_data;
 
-int get_url(char *url, void *data);
-int post_url(char *url, void *data);
+int get_url(char *url, void *data, char *cookie);
+int post_url(char *url, void *data, char *cookie);
 
 #endif

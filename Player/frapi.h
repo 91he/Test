@@ -2,38 +2,37 @@
 #define FR_API_H
 #include "box-fixed.h"
 
-struct Rect{
-    int x, y, w, h;
-};
+typedef struct rb_node_t rb_node_t;
+typedef struct thread_pool thread_pool;
 
-struct Rgn{
-    int num;
-    struct Rect rects[0];
-};
+typedef enum QueueType{
+    QUEUE_SIZE,
+    QUEUE_MSG
+}QueueType;
 
-typedef struct FRPlugin{
-    int id;
-    int x, y, w, h;
-    NPP_t instance;
-    NPWindow *np_win;
-    GtkWidget *socket;
-    cairo_t *cr;
-    GdkPixmap *pixmap;
-    struct Rgn *rgn;
-}FRPlugin;
+struct MsgQueue{
+    QueueType type;
+    int len;
+    int size;
+    int cur_pos;
+    int msg_len;
+    char *msg;
+};
 
 typedef struct FRManager{
-    FRPlugin *plugs;
     BoxFixed *bf;
-    struct thread_pool *pool;
+    GtkWidget *spice;
     int disp_width;
     int disp_height;
+    //rb_node_t *plugs;
+    struct thread_pool *pool;
+    struct MsgQueue msg_queue;
+    GHashTable *_plugs;
+    GHashTable *hash_table;
 }FRManager;
 
-void fr_init(GtkWidget *widget);
-
+void fr_init(GtkWidget *widget, GtkWidget *spice);
 void fr_process_msg(char *msg, int size);
-
 void fr_disp_resize(int w, int h);
 
 #endif

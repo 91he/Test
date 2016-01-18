@@ -46,12 +46,14 @@ void init_npp(NPPluginFuncs *pPluginFuncs){
     My_NPP_GetSitesWithData  = pPluginFuncs->getsiteswithdata;
     My_NPP_DidComposite      = pPluginFuncs->didComposite;
 }
-
+#if 0
 __attribute__((constructor))
-static void constructor_npfuncs(){
+static
+#endif
+void constructor_npfuncs(){
     NPPluginFuncs pluginFuncs;
 
-    handle = dlopen("./libflashplayer.so", RTLD_LAZY | RTLD_LOCAL);
+    handle = dlopen("/usr/lib64/libflashplayer.so", RTLD_LAZY | RTLD_LOCAL);
     //handle = dlopen("/usr/lib64/flash-plugin/libflashplayer.so", RTLD_LAZY | RTLD_LOCAL);
     My_NP_Initialize = dlsym(handle, "NP_Initialize");
     My_NP_Shutdown = dlsym(handle, "NP_Shutdown");
@@ -61,9 +63,11 @@ static void constructor_npfuncs(){
     My_NP_Initialize(&browserFuncs, &pluginFuncs);
     init_npp(&pluginFuncs);
 }
-
+#if 0
 __attribute__((destructor))
-static void destructor_npfuncs(){
+static
+#endif
+void destructor_npfuncs(){
     My_NP_Shutdown();
     dlclose(handle);
 }

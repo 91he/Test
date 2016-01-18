@@ -433,7 +433,7 @@ int main()
 	gettimeofday(&beg, NULL);
 	for(i = 1; i < count; ++i){
 		key = rand() % count;
-		root = rb_insert(i, key, root);
+		root = rb_insert(key, i, root);
 		/*
 		if((root = rb_insert(key, i, root))){
 			printf("[i = %d] insert key %d success!\n", i, key);
