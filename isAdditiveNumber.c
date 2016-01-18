@@ -13,6 +13,65 @@ void reverse(char *dst, const char *src){
     while(len) dst[--len] = *src++;
 }
 
+void recurAdd(char *numA, char *numB, char *numC){
+    char *tmpA = numA;
+    char *tmpB = numB;
+    char *tmpC = numC;
+    char *tmpPtr = tmpC;
+
+    *tmpC++ = '0';
+
+    while(*tmpA && *tmpB){
+        char tmp = *tmpA + (*tmpB - '0');
+
+        if(tmp - 10 >= '0'){
+            *tmpA = tmp - 10;
+            *tmpC = '1';
+        }else{
+            *tmpA = tmp;
+            *tmpC = '0';
+        }
+
+        tmpA++;
+        tmpB++;
+        tmpC++;
+    }
+
+    if(!*tmpA){
+        strcpy(tmpA, tmpB);
+        //while(*tmpA++ = *tmpB++);
+    }
+
+    while(*tmpPtr && *tmpPtr == '0') tmpPtr++;
+    if(!*tmpPtr) return;
+
+    if(*--tmpC == '0') *tmpC = 0;
+
+    recurAdd(numA, numC, numB);
+}
+
+void recurAdd2(char *dst, char *numA, char *numB){
+    int lenA = strlen(numA);
+    int lenB = strlen(numB);
+    int tmpLen = max(lenA, lenB) + 2;
+    char *tmpA, *tmpB, *tmpC;
+
+    tmpA = malloc(tmpLen);
+    tmpB = malloc(tmpLen);
+    tmpC = malloc(tmpLen);
+
+    reverse(tmpA, numA);
+    reverse(tmpB, numB);
+    
+    recurAdd(tmpA, tmpB, tmpC);
+
+    reverse(dst, tmpA);
+
+    free(tmpA);
+    free(tmpB);
+    free(tmpC);
+}
+
 char *bigAdd(char *numA, char *numB){
     int lenA = strlen(numA);
     int lenB = strlen(numB);
@@ -73,7 +132,7 @@ char *bigAdd(char *numA, char *numB){
         dstD = dstE;
         dstE = tmpPtr;
         
-        if(strlen(dstD) > strlen(dstC)){
+        if(strlen(dstD) > strlen(dstC) && *tmpPtr == '1'){
             tmpPtr = dstC;
             dstC = dstD;
             dstD = tmpPtr;
@@ -155,5 +214,12 @@ end:
 int main(int argc, char **argv){
     //printf("%d\n", strncmp("100", "100199", 3));
     printf("%d\n", isAdditiveNumber(argv[1]));
+    char *dst = malloc(128);
+
+    recurAdd2(dst, "123456789101112131415161718", "123456789101112131415161718");
+    printf("%s\n", dst);
+
+    free(dst);
+
     return 0;
 }
