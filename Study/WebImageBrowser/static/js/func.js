@@ -1,7 +1,17 @@
-var oldObj = [], oldWidth = 0;
+var oldObj = [], oldWidth = 0, oldHeight;
 var curId = 0, restrictHeight = 140;
 
-function stopBubble(e){
+function stopBubble(obj, e){
+    var width = document.body.offsetWidth;
+    var index = parseInt(obj.getAttribute("index"), 10);
+    var imageShower = document.getElementById("image_shower");
+
+    if(e.clientX < width / 2){
+        if(index - 1 >= 0) imageShower.children[index - 1].firstElementChild.click();
+    }else if(index + 1 < imageShower.children.length){
+        imageShower.children[index + 1].firstElementChild.click();
+    }
+
     if (e && e.stopPropagation)
         e.stopPropagation();
     else
@@ -26,10 +36,21 @@ function time(){
     return new Date().getTime();
 }
 
+
 function scrollFunc(){
     if(window.innerHeight + document.body.scrollTop > document.body.scrollHeight - 200){
         genEmiter();
     }
+}
+
+function hideFunc(){
+    var layer = document.getElementById('layer');
+
+    layer.removeAttribute("src");
+    layer.removeAttribute("width");
+    layer.removeAttribute("height");
+    document.getElementById('fix_bg').style.height = "0px";
+    document.getElementById('fix_layer').style.height = "0px";
 }
 
 function genEmiter(){
@@ -53,13 +74,14 @@ function makeDiv(index, path, width, height, image_width, image_height){
     var img = document.createElement("img");
 
     //console.log(width + "," + height + "," + image_width + "," + image_height);
+    //console.log(path + "," + image_width + "," + image_height);
     div.style.display = "inline-block";
     div.style.verticalAlign = "top";
     div.style.width = width + "px";
     div.style.height = height + "px";
     div.setAttribute("hw", image_width);
     div.setAttribute("hh", image_height);
-    div.style.backgroundColor = "#" + Math.round(Math.random() * 0xfff).toString(16);
+    //div.style.backgroundColor = "#" + Math.round(Math.random() * 0xfff).toString(16);
 
     if(width / height > image_width / image_height){
         img.height = height;
@@ -85,15 +107,19 @@ function makeDiv(index, path, width, height, image_width, image_height){
             var showerWidth = div.parentElement.offsetWidth;
             showerWidth -= window.innerHeight == document.body.scrollHeight ? getScrollbarWidth() : 0;
 
-            if(div.offsetLeft == 0)
-                tx += img.width - width / 2;
-            else if(div.offsetLeft + width == showerWidth)
-                tx -= img.width - width / 2;
+            if(img.width > width / 2){
+                if(div.offsetLeft == 0)
+                    tx += img.width - width / 2;
+                else if(div.offsetLeft + width == showerWidth)
+                    tx -= img.width - width / 2;
+            }
             
-            if(div.offsetTop == 0)
-                ty += img.height - height / 2;
-            else if(div.offsetTop + height == div.parentElement.offsetHeight)
-                ty -= img.height - height / 2;
+            if(img.height > height / 2){
+                if(div.offsetTop == 0)
+                    ty += img.height - height / 2;
+                else if(div.offsetTop + height == div.parentElement.offsetHeight)
+                    ty -= img.height - height / 2;
+            }
             
             img.style.transform = "translate(" + tx + "px, " + ty + "px) scale(2)"
             img.style.boxShadow = "0px 0px 10px #000";
@@ -101,7 +127,27 @@ function makeDiv(index, path, width, height, image_width, image_height){
 
     };
     img.onmouseout = function(){showAble = false; img.style.transform = ""; img.style.boxShadow = "";};
-    img.onclick = function(){ };
+    img.onclick = function(){
+        var w = document.body.offsetWidth;
+        var h = window.innerHeight;
+        var fix_bg = document.getElementById("fix_bg");
+        var fix_layer = document.getElementById("fix_layer");
+        var layer = document.getElementById("layer");
+
+        fix_bg.style.height = h + "px";
+        fix_layer.style.height = h + "px";
+        layer.removeAttribute("width");
+        layer.removeAttribute("height");
+
+        if(w / h > image_width / image_height){
+            if(image_height > h) layer.height = h;
+        }else if(image_width > w){
+            layer.width = w;
+        }
+
+        layer.setAttribute("index", index);
+        layer.src = img.src;
+    };
 
     div.appendChild(img);
 
@@ -113,6 +159,7 @@ function gen(obj){
     var ratioArr = [], ratioCur = 0, ratioLast;
     var imageShower = document.getElementById("image_shower");
     var showerWidth = imageShower.offsetWidth > 1000 ? imageShower.offsetWidth : 1000;
+    var count = imageShower.children.length;
 
     if(window.innerHeight == document.body.scrollHeight){
         showerWidth -= getScrollbarWidth();
@@ -162,7 +209,7 @@ function gen(obj){
             }while(gap);
 
             for(var iter = begin; iter <= end; iter++){
-                imageShower.appendChild(makeDiv(index, obj[index].path, widthArr[iter], height, obj[iter].width, obj[iter].height));
+                imageShower.appendChild(makeDiv(count + iter, obj[iter].path, widthArr[iter], height, obj[iter].width, obj[iter].height));
             }
 
             index = end;
@@ -176,6 +223,33 @@ function gen(obj){
 }
 
 function adjEmiter(){
+    if(oldHeight != window.innerHeight){
+        var fix_layer = document.getElementById("fix_layer");
+
+        oldHeight = window.innerHeight;
+
+        if(fix_layer.style.height != "0px"){
+            var w = document.body.offsetWidth;
+            var h = window.innerHeight;
+            var fix_bg = document.getElementById("fix_bg");
+            var layer = document.getElementById("layer");
+            var index = parseInt(layer.getAttribute("index"), 10);
+            var image = document.getElementById("image_shower").children[index];
+            var width = parseInt(image.getAttribute("hw"), 10);
+            var height = parseInt(image.getAttribute("hh"), 10);
+
+            fix_bg.style.height = h + "px";
+            fix_layer.style.height = h + "px";
+
+            if(w / h > width / height){
+                if(height > h) layer.height = h;
+            }else if(width > w){
+                layer.width = w;
+            }
+        }
+    }
+
+
     if(oldWidth != document.body.offsetWidth){
         oldTime = time();
         oldWidth = document.body.offsetWidth;
@@ -193,7 +267,7 @@ function adjust(){
     var children = imageShower.children;
     
     for(var index = 0; index < children.length; index++){
-        console.log("index: " + index + ", " + children[index]);
+        //console.log("index: " + index + ", " + children[index]);
         var width = parseInt(children[index].getAttribute("hw"), 10);
         var height = parseInt(children[index].getAttribute("hh"), 10);
 
@@ -201,6 +275,8 @@ function adjust(){
     }
     
     imageShower.innerHTML = "";
+    obj = obj.concat(oldObj);
+    oldObj = [];
     gen(obj);
 }
 
