@@ -71,9 +71,7 @@ function genEmiter(){
 function makeDiv(index, path, width, height, image_width, image_height){
     var showAble = true;
     var div = document.createElement("div");
-    var docker_div = document.createElement("div");
     var img = document.createElement("img");
-    var button = document.createElement("img");
 
     //console.log(width + "," + height + "," + image_width + "," + image_height);
     //console.log(path + "," + image_width + "," + image_height);
@@ -84,8 +82,6 @@ function makeDiv(index, path, width, height, image_width, image_height){
     div.setAttribute("hw", image_width);
     div.setAttribute("hh", image_height);
     //div.style.backgroundColor = "#" + Math.round(Math.random() * 0xfff).toString(16);
-    
-    docker_div.style.transition = "all .3s";
 
     if(width / height > image_width / image_height){
         img.height = height;
@@ -102,10 +98,8 @@ function makeDiv(index, path, width, height, image_width, image_height){
     }
 
     img.src = path;
-    //img.style.transition = "transform .3s";
-    img.style.transition = "all .3s";
+    img.style.transition = "transform .3s";
     img.onmouseover = function(){
-        return;
         showAble = true;
         setTimeout(function(){
             if(!showAble) return;
@@ -133,110 +127,30 @@ function makeDiv(index, path, width, height, image_width, image_height){
 
     };
 
-    img.onmouseout = function(){return;showAble = false; img.style.transform = ""; img.style.boxShadow = "";};
+    img.onmouseout = function(){showAble = false; img.style.transform = ""; img.style.boxShadow = "";};
     img.onclick = function(){
-        return function(e){
-            if(showAble){
-                showAble = false;
-                var w = document.body.offsetWidth;
-                var h = window.innerHeight;
-                var iw = image_width, ih = image_height;
+        var w = document.body.offsetWidth;
+        var h = window.innerHeight;
+        var fix_bg = document.getElementById("fix_bg");
+        var fix_layer = document.getElementById("fix_layer");
+        var layer = document.getElementById("layer");
 
-                if(curIndex != -1){
-                    div.parentElement.children[curIndex].firstElementChild.children[1].click();
-                }
+        fix_bg.style.height = h + "px";
+        fix_layer.style.height = h + "px";
+        layer.removeAttribute("width");
+        layer.removeAttribute("height");
 
-                curIndex = index;
-
-                //img.style.position = "fixed";
-                //img.style.zIndex = "100";
-                //img.style.left = img.getBoundingClientRect().left + "px";
-                //img.style.top = img.getBoundingClientRect().top - window.pageYOffset + "px";
-                //img.style.top = img.getBoundingClientRect().top - window.pageYOffset + "px";
-                docker_div.style.position = "fixed";
-                docker_div.style.zIndex = "100";
-                docker_div.style.left = img.getBoundingClientRect().left + "px";
-                docker_div.style.top = img.getBoundingClientRect().top - window.pageYOffset + "px";
-                docker_div.style.top = img.getBoundingClientRect().top - window.pageYOffset + "px";
-                docker_div.style.boxShadow = "0px 0px 15px black";
-
-                button.style.display = "block";
-
-                if(w / h > image_width / image_height){
-                    if(image_height > h){
-                        ih = h;
-                        iw = h * image_width / image_height;
-                    }
-                }else if(image_width > w){
-                    iw = w;
-                    ih = w * image_height / image_width;
-                }
-
-                docker_div.style.left = (w - iw) / 2 + "px";
-                docker_div.style.top = (h - ih) / 2 + "px";
-                //img.style.left = (w - iw) / 2 + "px";
-                //img.style.top = (h - ih) / 2 + "px";
-                img.style.width = iw + "px";
-                img.style.height = ih + "px";
-            }else{
-                button.click();
-
-                if(e.clientX < window.innerWidth / 2) div.parentElement.children[index - 1].firstElementChild.firstElementChild.click();
-                else div.parentElement.children[index + 1].firstElementChild.firstElementChild.click();
-            }
-
-            return;
-            var fix_bg = document.getElementById("fix_bg");
-            var fix_layer = document.getElementById("fix_layer");
-            var layer = document.getElementById("layer");
-
-            fix_bg.style.height = h + "px";
-            fix_layer.style.height = h + "px";
-            layer.removeAttribute("width");
-            layer.removeAttribute("height");
-
-            if(w / h > image_width / image_height){
-                if(image_height > h) layer.height = h;
-            }else if(image_width > w){
-                layer.width = w;
-            }
-
-            layer.setAttribute("index", index);
-            layer.src = img.src;
+        if(w / h > image_width / image_height){
+            if(image_height > h) layer.height = h;
+        }else if(image_width > w){
+            layer.width = w;
         }
-    }();
 
-    button.onclick = function(){
-        curIndex = -1;
-        showAble = true;
+        layer.setAttribute("index", index);
+        layer.src = img.src;
+    };
 
-        button.style.display = "none";
-        //console.log("left: " + img.offsetLeft + ", top: " + img.offsetTop);
-        docker_div.style.left = div.getBoundingClientRect().left + "px";
-        docker_div.style.top = div.getBoundingClientRect().top + "px";
-        img.style.width = parseInt(img.getAttribute("width"), 10) + "px";
-        img.style.height = parseInt(img.getAttribute("height"), 10) + "px";
-
-        setTimeout(function(){
-                    docker_div.style.position = "relative";
-                    docker_div.style.left = "";
-                    docker_div.style.top = "";
-                    docker_div.style.zIndex = "";
-                    docker_div.style.boxShadow = "";
-                }, 300);
-    }
-    button.src = "../static/images/close.png";
-    button.style.display = "none";
-    button.style.position = "absolute";
-    button.style.right = "0px";
-    button.style.top = "0px";
-    button.width = 20;
-    button.height = 20;
-
-    //div.appendChild(img);
-    div.appendChild(docker_div);
-    docker_div.appendChild(img);
-    docker_div.appendChild(button);
+    div.appendChild(img);
 
     return div;
 }
@@ -314,30 +228,9 @@ function adjEmiter(){
         var fix_layer = document.getElementById("fix_layer");
 
         oldHeight = window.innerHeight;
-/*
-        if(curIndex != -1){
-            var w = window.innerWidth;
-            var h = window.innerHeight;
-            var div = document.getElementById("image_shower").children[curIndex].firstElementChild;
-            var width = parseInt(div.getAttribute("hw"), 10);
-            var height = parseInt(div.getAttribute("hh"), 10);
 
-            if(w / h > width / height){
-                if(height > h){
-                    div.firstElementChild.style.height = h + "px";
-                    div.firstElementChild.style.width = h * width / height + "px";
-                }
-            }else if(width > w){
-                div.firstElementChild.style.width = w + "px";
-                div.firstElementChild.style.height = w * height / width + "px";
-            }
-
-            div.firstElementChild.style.left = (w - div.firstElementChild.width) / 2 + "px";
-            div.firstElementChild.style.top = (h - div.firstElementChild.height) / 2 + "px";
-        }
-*/
         if(fix_layer.style.height != "0px"){
-            var w = window.innerWidth;
+            var w = document.body.offsetWidth;
             var h = window.innerHeight;
             var fix_bg = document.getElementById("fix_bg");
             var layer = document.getElementById("layer");
@@ -379,18 +272,13 @@ function adjust(){
         var width = parseInt(children[index].getAttribute("hw"), 10);
         var height = parseInt(children[index].getAttribute("hh"), 10);
 
-        obj.push({width: width, height: height, path: children[index].firstElementChild.firstElementChild.src});
+        obj.push({width: width, height: height, path: children[index].firstElementChild.src});
     }
     
     imageShower.innerHTML = "";
     obj = obj.concat(oldObj);
     oldObj = [];
     gen(obj);
-    if(curIndex != -1){
-        var ti = curIndex;
-        curIndex = -1;
-        children[ti].firstElementChild.firstElementChild.click();
-    }
 }
 
 genEmiter()
