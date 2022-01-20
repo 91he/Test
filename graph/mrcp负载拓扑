@@ -1,1 +1,176 @@
-<mxfile host="app.diagrams.net" modified="2022-01-20T08:19:16.979Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62" etag="JiGZwKiI6IOMCr9spPJ0" version="16.4.2" type="github"><diagram name="Page-1" id="822b0af5-4adb-64df-f703-e8dfc1f81529">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</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-01-20T12:25:52.374Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62" etag="h8lWdUgU8wEwlGbeqqAu" version="16.4.2" type="github">
+  <diagram name="Page-1" id="822b0af5-4adb-64df-f703-e8dfc1f81529">
+    <mxGraphModel dx="1577" dy="893" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="10.10.10.1:8060" tooltip="Load Banlancer泰康负载" id="cNc1T2rOo8bvtwQUHvCo-1">
+          <mxCell style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.pbx_server;" vertex="1" parent="1">
+            <mxGeometry x="400" y="110" width="65" height="85" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-2" value="UAP" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.pbx_server;" vertex="1" parent="1">
+          <mxGeometry x="140" y="110" width="65" height="85" as="geometry" />
+        </mxCell>
+        <UserObject label="192.168.10.2:8060" tooltip="MRCP Server 2" id="cNc1T2rOo8bvtwQUHvCo-3">
+          <mxCell style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.pbx_server;" vertex="1" parent="1">
+            <mxGeometry x="750" y="350" width="65" height="85" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="192.168.10.1:8060" tooltip="MRCP Server 1" id="cNc1T2rOo8bvtwQUHvCo-4">
+          <mxCell style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.pbx_server;" vertex="1" parent="1">
+            <mxGeometry x="590" y="380" width="65" height="85" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-7" value="" style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="cNc1T2rOo8bvtwQUHvCo-2" target="cNc1T2rOo8bvtwQUHvCo-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="110" as="sourcePoint" />
+            <mxPoint x="300" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-10" value="SIP/SDP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cNc1T2rOo8bvtwQUHvCo-7">
+          <mxGeometry x="-0.4188" y="-2" relative="1" as="geometry">
+            <mxPoint x="38" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-8" value="" style="curved=1;endArrow=classic;html=1;rounded=0;strokeColor=default;" edge="1" parent="1" source="cNc1T2rOo8bvtwQUHvCo-1" target="cNc1T2rOo8bvtwQUHvCo-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="210" as="sourcePoint" />
+            <mxPoint x="300" y="270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="432" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-11" value="SIP/SDP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cNc1T2rOo8bvtwQUHvCo-8">
+          <mxGeometry y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-9" value="" style="curved=1;endArrow=classic;html=1;rounded=0;strokeColor=default;" edge="1" parent="1" target="cNc1T2rOo8bvtwQUHvCo-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="180" as="sourcePoint" />
+            <mxPoint x="403.68421052631584" y="310" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-12" value="SIP/SDP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cNc1T2rOo8bvtwQUHvCo-9">
+          <mxGeometry x="0.2292" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-13" value="&lt;ul&gt;&lt;li&gt;10.10.10.1:8060&amp;nbsp; &amp;nbsp; &amp;nbsp;泰康负载&lt;/li&gt;&lt;li&gt;192.168.10.1:8060 MRCP Server 1&lt;/li&gt;&lt;li&gt;192.168.10.2:8060 MRCP Server 2&lt;/li&gt;&lt;li&gt;黑色线路是SIP/SDP协议会话流，使用MRCPv2 TCP协议（必须是TCP）&lt;/li&gt;&lt;li&gt;红色线路是RTP媒体流，使用RTP UDP协议&lt;/li&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="90" y="365" width="340" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-17" value="" style="curved=1;endArrow=classic;html=1;rounded=0;strokeColor=#FF0000;" edge="1" parent="1" source="cNc1T2rOo8bvtwQUHvCo-2" target="cNc1T2rOo8bvtwQUHvCo-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="313.9743589743591" y="250" as="sourcePoint" />
+            <mxPoint x="380.46153846153857" y="425" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-18" value="RTP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cNc1T2rOo8bvtwQUHvCo-17">
+          <mxGeometry y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-19" value="" style="curved=1;endArrow=classic;html=1;rounded=0;strokeColor=#FF0000;" edge="1" parent="1" source="cNc1T2rOo8bvtwQUHvCo-2" target="cNc1T2rOo8bvtwQUHvCo-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="215" y="204.68085106382966" as="sourcePoint" />
+            <mxPoint x="490" y="406.7977528089888" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="460" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-20" value="RTP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cNc1T2rOo8bvtwQUHvCo-19">
+          <mxGeometry y="4" relative="1" as="geometry">
+            <mxPoint x="20" y="21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-23" value="&lt;ul&gt;&lt;li&gt;MRCP Server通常会配置使用的端口段、ip和ext-ip&lt;/li&gt;&lt;li&gt;端口段为MRCP Server指定使用的RTP端口范围&lt;/li&gt;&lt;li&gt;ip为MRCP Server本机绑定地址&lt;/li&gt;&lt;li&gt;ext-ip为传递给UAP时携带的RTP媒体流接收地址，这种模式下一般使用UDP原端口一对一映射&lt;/li&gt;&lt;li&gt;RTP媒体流的UDP端口(port)在SDP中指定(MRCP Server在端口段中选择一个未用端口)，是协商端口，确保对方可以通过ext-ip:port向Server传递媒体流&lt;/li&gt;&lt;li&gt;大多数情况下调用方无需知道(除非需要配置出口白名单)RTP传递时所使用的端口或端口段&lt;/li&gt;&lt;li&gt;当防火墙支持TCP SIP ALG时，UDP公网端口段映射不是必须的&lt;/li&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="570" y="500" width="400" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-27" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="440" y="265" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-34" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;rounded=0;fontSize=15;curved=1;startArrow=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="cNc1T2rOo8bvtwQUHvCo-55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="189.99999999999977" y="280" as="sourcePoint" />
+            <mxPoint x="820" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-39" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;fontSize=15;strokeColor=#000000;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="cNc1T2rOo8bvtwQUHvCo-42">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="684.1421356237263" y="265.8578643762738" as="sourcePoint" />
+            <mxPoint x="780" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-40" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;fontSize=15;strokeColor=#000000;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cNc1T2rOo8bvtwQUHvCo-27" target="cNc1T2rOo8bvtwQUHvCo-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="190" as="sourcePoint" />
+            <mxPoint x="780" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-41" value="公网映射x.x.x.x:806a" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="790" y="155" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-42" value="公网映射x.x.x.x:806b" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="790" y="195" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-44" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="283" y="275" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-45" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="293" y="275" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-46" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="303" y="275" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-47" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="313" y="275" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-51" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="548" y="275" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-52" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="558" y="275" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-53" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="568" y="275" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-54" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="578" y="275" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-55" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="655" y="265" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-56" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;rounded=0;fontSize=15;curved=1;" edge="1" parent="1" target="cNc1T2rOo8bvtwQUHvCo-55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="189.99999999999966" y="280" as="sourcePoint" />
+            <mxPoint x="820" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-57" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;fontSize=15;strokeColor=#FF0000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="279" as="sourcePoint" />
+            <mxPoint x="660" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-58" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;fontSize=15;strokeColor=#FF0000;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="cNc1T2rOo8bvtwQUHvCo-53">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="485.6066017177982" y="289.39339828220204" as="sourcePoint" />
+            <mxPoint x="660" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cNc1T2rOo8bvtwQUHvCo-59" value="UDP端口段" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;fontSize=15;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="661" y="133" width="109" height="27" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
